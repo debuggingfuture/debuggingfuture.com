@@ -165,7 +165,7 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 > 「人間なんていつ死ぬか分からない。とにかく自分が生きた証拠をつめ跡ぐらいでもいいから残そう。受験勉強なんてしている場合じゃない」 ---[漫画革命４０年　永井豪特集](https://www.nikkansports.com/special/nagai/2007/top-nagai.html)
 
-《破廉恥學園》，受世人批判，永井堅持著。
+《破廉恥學園》受世人批判，永井堅持著。
 有人說最好的作品，不是創作者紀律或野心所至，而是創作者被吞噬。
 我相信永井豪僅是忠誠於自己創作而己。
 
@@ -191,12 +191,13 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 ![img](https://pedialab.io/hero_image.jpg)
 
 包浩斯解散了，理念卻沒有死。
-人材逃難到美國法國破釜沉舟和以色列等各地，也許還更造就其 flourish。
+人材逃難到美國法國和以色列等各地，也許還更造就其 flourish。
 
-來自日本的學生不多，卻啟發了川喜田煉七郎成立新建築工藝學院，孕育了學生亀倉雄策
-及其 1964 年東京奧運海報簡約有力衝擊視覺的風格，構建了被稱為現代的 Zeitgeist。
+來自日本的學生不多，卻啟發了川喜田煉七郎成立新建築工藝學院，
+[孕育了學生亀倉雄策](https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-the-japanese-bauhaus/)及其1964年東京奧運海報簡約有力衝擊視覺的風格，
+構建了被稱為現代的 Zeitgeist。
 
-https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-the-japanese-bauhaus/
+
 ![img](https://made-in-wonder.com/images/item/1709/pic2.jpg)
 
 大師和和學生輾轉到了伊利諾理工學院，芝加哥設計學院，
@@ -218,6 +219,7 @@ https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-
 另一包浩斯學生鮑立克 Paulick，到上海當年的聖約翰大學任教。
 國共內戰，[在上海或國外留學的來到香港成為第一代香港華人建築師](https://www.thestandnews.com/city/%E4%B8%AD%E7%92%B0%E8%A1%97%E5%B8%82%E5%8F%8A%E5%8C%85%E6%B5%A9%E6%96%AF%E5%9C%A8%E9%A6%99%E6%B8%AF%E7%9A%84%E7%A8%AE%E5%AD%90)。其中范文照的作品有[九龍靈糧堂教堂、北角循道衛理堂](https://www.hk01.com/%E5%91%A8%E5%A0%B1/344267/%E7%99%BE%E5%B9%B4%E5%8C%85%E6%B5%A9%E6%96%AF-%E4%BA%8C-%E9%A6%99%E6%B8%AF%E4%B9%9F%E6%9C%89%E5%8C%85%E6%B5%A9%E6%96%AF-%E5%8D%97%E4%BE%86%E5%BB%BA%E7%AF%89%E5%A4%A7%E5%B8%AB%E5%B8%B6%E4%BE%86%E5%82%B3%E4%B8%96%E5%82%91%E4%BD%9C)，瑪利諾中學和九華的小教堂是出自陸謙受。
 
+
 > **Das Bauhaus ist tot. Es lebe das Bauhaus.**
 
 **包浩斯己死、包浩斯不滅。**
@@ -227,9 +229,10 @@ https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-
 歷久不衰，[Villa Tugendhat 百年過還後像摩登豪宅](https://www.youtube.com/watch?v=VmtKiBH02dk)；
 高度理性，以 Piet Mondrian 聞名的荷蘭風格派 [De Stijl](https://artincontext.org/de-stijl-art/)又因包浩斯發揚光大，
 
-包浩斯強大的生命力融入建築、藝術家俱設計及教育制度，[百年各種創作有意無意被影響或暗合](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)。如催出了[更符合消費主義的 IKEA](https://www.smh.com.au/entertainment/art-and-design/how-ikea-revolutionised-homewares-20100913-158ji.html)。
+包浩斯強大的生命力融入建築、藝術家俱設計及教育制度，[百年各種創作有意無意被影響或暗合](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)，如催出了[更符合消費主義的 IKEA](https://www.smh.com.au/entertainment/art-and-design/how-ikea-revolutionised-homewares-20100913-158ji.html)。
 
-界定「是不是包浩斯」早以太難，**重要是其今天不能否認的存在。**
+界定「是不是包浩斯」早以太難，也不重要，
+**重要是其今天不能否認的存在。**
 
 ![img](https://miro.medium.com/max/1400/0*fLPAxv2QAahUfotO.jpeg)
 
@@ -257,6 +260,7 @@ https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-
 
 一次死裏逃生後人生脆弱，他憑心做事、相信教育教養所帶領的感情力量。
 在王維基的世界觀，最後悔的是「沒有嘗試」，那種夢魘令人靈魂也不得安息。
+時代變化快，新事物新機會用過往經驗判斷無謂；
 世事不能預料，能料的唯有自己心中那團火。
 最鐘愛的事情，能破釜沉舟投入最大的力量試，才做得最好。
 
@@ -344,7 +348,7 @@ https://eyeondesign.aiga.org/from-weimar-to-tokyo-the-origins-and-influences-of-
 《文明4》「如期落後」急需找人設計主題曲，畢業後同房 Reunion 一拍即合，[從小就接觸文明系列的田志仁一口答應](https://www.youtube.com/watch?v=IuqAxQbxrzM)，從太空回望地球日出東升的簡單構圖發想，一直伙拍的非洲合唱團以 Swahili 禱文作主題配上系列首次推出的宗教系統，結果作品 Baba Yetu 成了[首個得艾美獎的電腦遊戲音樂](https://en.wikipedia.org/wiki/Christopher_Tin#GRAMMY_Awards)；田志仁成了 Reddit 上最炙手可熱的作曲家，[在 Kickstarter 錄得破記錄的銷售](https://www.kickstarter.com/projects/christophertin/new-album-by-christopher-tin-baba-yetu-civilizatio)
 
 當初許多人否定擁有古典音樂學術背景的他為電動遊戲作曲，怕被定型。
-而田志仁認定有種挑戰性，新鮮有趣，[更推翻了過創作電玩音樂是「不務正業」的負面形象。](http://www.chinesedaily.com/info_People.asp?idno=54)
+而田志仁覺得新鮮有趣有挑戰性，作品為他展開專業創作生涯，[更推翻了過創作電玩音樂是「不務正業」的負面形象。](http://www.chinesedaily.com/info_People.asp?idno=54)
 
 《文明6》田志仁再為其作曲，看到遊戲開發截圖決定以探索為主題，不止地理上的，還有心智上的。
 
