@@ -3,8 +3,26 @@
   display: flex;
 .tags
   list-style-type: none;
+article
+  .container
+    font-size: 1.3em
+    text-underline-offset: 4px;
+.video-container
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+p:lang(en)
+    font-family: 'Helvetica Neue'
+    font-weight:500;
+
 p
   font-weight 500;
+  margin-bottom: 0rem;
+
+p:has(> img)
+    text-align: center;
+img
+  padding-bottom: 0rem;
 strong
   font-weight: 900;
 a
@@ -12,7 +30,30 @@ a
   &:hover, &:focus
     color gray-dark
   &:visited, &:link
-    color black
+    color #4d4d4d
+    text-decoration-thickness: from-font;
 a img
   &:hover, &:focus
     cursor zoom-in
+hr
+  margin-top: 4rem
+  margin-bottom: 4rem
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  text-align: center;
+
+
+hr:after
+  content: "‧‧‧";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+
+blockquote
+  margin-top: 1rem
+  p:last-child
+    margin-top: 0em

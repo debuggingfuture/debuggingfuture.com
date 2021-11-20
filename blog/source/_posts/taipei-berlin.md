@@ -2,7 +2,7 @@
 title: 台北與柏林
 tags: [tw,self]
 categories: [thoughts, tw]
-date: 217-08-03
+date: 2017-08-03
 ---
 
 
