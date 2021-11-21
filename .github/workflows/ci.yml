@@ -18,6 +18,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: git setup
+        run: |
+          git config --global user.email ${{secrets.GIT_AUTHOR_EMAIL}}
+          git config --global user.name ${{secrets.GIT_AUTHOR_NAME}}
       - name: yarn install
         run: yarn install
       - name: yarn deploy
