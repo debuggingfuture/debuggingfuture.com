@@ -3,6 +3,8 @@ title: 立
 tags: [hk, self]
 categories: [thoughts, hk]
 date: 2018-08-13
+medium: https://medium.com/@vincent_lcy/%E7%AB%8B-e110ab209635
+
 ---
 
 轉眼快三十，
@@ -322,7 +324,3 @@ date: 2018-08-13
 
 所以近年最銘記的格言，
 叫做「我返出去做野先」。
-
----
-
-另刊：[Medium](https://medium.com/@vincent_lcy/%E7%AB%8B-e110ab209635)

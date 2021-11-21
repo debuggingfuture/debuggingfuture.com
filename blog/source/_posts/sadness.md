@@ -2,7 +2,7 @@
 title: 落月滿屋樑
 tags: [death]
 categories: [thoughts]
-date: 2021-02-21
+date: 2017-02-21
 ---
 
 很小時出席太婆的喪禮，印象深刻，首次感到死亡的恐懼。

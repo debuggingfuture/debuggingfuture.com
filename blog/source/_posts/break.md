@@ -4,6 +4,7 @@ tags: [hk, self]
 categories: [thoughts, hk]
 date: 2021-11-18
 thumbnail: break.png
+mirror: https://mirror.xyz/0x5CA76c95a877bfE72e837B63464Db191faDe405F/kefFVUZpzHUMOrbIiw-yxbcRrevPqIEos0i6b6bPXI0
 ---
 
 ![img](break.png)

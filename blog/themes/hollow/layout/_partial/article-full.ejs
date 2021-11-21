@@ -39,6 +39,15 @@
                                 <div class="post-date">
                                     <%- item.date.format(config.date_format || theme.date_format) %>
                                 </div>
+                                <div class="post-date">
+                                  Also on:
+                                  <% if (item.mirror){ %>
+                                    <a href="<%- item.mirror %>">mirror.xyz</a>
+                                      <% } %>
+                                  <% if (item.medium){ %>
+                                    <a href="<%- item.medium %>">medium.com</a>
+                                      <% } %>
+                                </div>
                             </div>
                     </div>
 
