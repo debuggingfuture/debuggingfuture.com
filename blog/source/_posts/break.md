@@ -172,11 +172,11 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 不懂設計，也總聽過「形式追隨功能」、「Less is More」和將其揚光大的「包浩斯」。
 一戰結束威瑪共和初立，知識份子懷著改革的理想，
 葛羅佩斯(Walter Gorpius)祈望結合工藝、藝術與工業生產，
-務實而不失理想，[創建無等級之分的公會、「以設計改變社會」](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)
+務實而不失理想，[創建無等級之分的公會、「以設計改變社會」](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)。
 
 <div lang="en">
 
-> Architects, sculptors, painters—we all must return to craftsmanship! For there is no such thing as “art by profession.” https://bauhausmanifesto.com/
+> Architects, sculptors, painters—we all must return to craftsmanship! For there is no such thing as “art by profession." ---[Bauhaus Manifesto](https://bauhausmanifesto.com/)
 
 > Design is neither an intellectual nor a material affair but simply an integral part of the stuff of life, necessary for everyone in a civilised society."
 
