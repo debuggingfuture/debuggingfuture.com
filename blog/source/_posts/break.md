@@ -321,21 +321,22 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
 </div>
 
-![img](https://i.imgur.com/egbVHi4.gif)
-
 身邊的圍牆，讓你從反抗，到習慣再依賴；
 體制總磨滅心志，在現實棱角往往被磨平。
 如戲中摩根費曼飾演的獄友告誡**希望是危險的**，追尋理想從不浪漫，
 主角被在獄被虐打被強暴，被關進臭格數月；
 在雷雨之際爬過數個足球場長的「屎渠」才成功擺脫那圍牆。
 
-![img](https://64.media.tumblr.com/6e059d2dbfebfd0103ac3f53d25ecac3/tumblr_psr1tfs6n41roie29_1280.jpg)
+![img](https://i.imgur.com/egbVHi4.gif)
+
 
 道貌岸然的獄長拿著聖經說"Salvation lies within"
 諷刺的，主角就把越獄的小鎚子藏在裡頭。
 **正因如此，電影題為 Redemption 而不是 Salvation**－－
 [那是種「自我救贖」，留給敢夢敢想之人](https://ericlamtf.medium.com/%E5%B8%8C%E6%9C%9B%E8%88%87%E6%95%91%E8%B4%96-%E6%9C%88%E9%BB%91%E9%AB%98%E9%A3%9B-9930a90580ef)。
 假若你不信神，你也要相信自己。
+
+![img](https://64.media.tumblr.com/6e059d2dbfebfd0103ac3f53d25ecac3/tumblr_psr1tfs6n41roie29_1280.jpg)
 
 因某種價值我們都被某種原罪，將付出某種代價；
 **懷著希望而決澤，又正彰顥我們相信的那價值。**
