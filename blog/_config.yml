@@ -106,8 +106,8 @@ theme: hollow
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:vincentlaucy/debuggingfuture.com.git
+  type: https
+  repo: https://github.com/vincentlaucy/debuggingfuture.com.git
   branch: gh-pages
   token: $GITHUB_TOKEN
 
