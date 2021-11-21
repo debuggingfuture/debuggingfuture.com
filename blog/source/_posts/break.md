@@ -287,7 +287,7 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
 「豁出去」忠於信念積極面對，
 蕩然看破即使有日身陷囹圄，也是種選擇，
-也會自得平安，[「内心吶喊的就是自由」](https://www.thestandnews.com/politics/%E6%99%82%E4%BB%A3%E9%9D%A9%E5%91%BD%E5%B0%8E%E6%BC%94%E5%91%A8%E5%86%A0%E5%A8%81%E9%9B%BB%E5%BD%B1%E5%B0%B1%E6%98%AF%E5%89%B5%E9%80%A0%E5%8A%9B%E6%A8%82%E8%A7%80%E6%98%AF%E5%8F%AF%E4%BB%A5%E5%89%B5%E9%80%A0%E7%9A%84)。
+也會自得平安，[**「内心吶喊的就是自由」**](https://www.thestandnews.com/politics/%E6%99%82%E4%BB%A3%E9%9D%A9%E5%91%BD%E5%B0%8E%E6%BC%94%E5%91%A8%E5%86%A0%E5%A8%81%E9%9B%BB%E5%BD%B1%E5%B0%B1%E6%98%AF%E5%89%B5%E9%80%A0%E5%8A%9B%E6%A8%82%E8%A7%80%E6%98%AF%E5%8F%AF%E4%BB%A5%E5%89%B5%E9%80%A0%E7%9A%84)。
 
 不由環境政權罷布生命，
 任何苦難或際遇都不重要，
