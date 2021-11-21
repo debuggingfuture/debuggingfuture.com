@@ -359,11 +359,11 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
 <div lang="en">
 
-> Una volta che avrai, Spiccato il volo, deciderai
+> __Una volta che avrai, Spiccato il volo, deciderai__
 >    -- Once you have tasted flight,
-> Sguardo verso il ciel, saprai:
+> __Sguardo verso il ciel, saprai:__
 >   -- Gaze towards the sky, you'll know that
-> Lì a casa il cuore sentirai.
+> __Lì a casa il cuore sentirai.__
 >   -- That is where your heart will feel at home.
 
 </div>
