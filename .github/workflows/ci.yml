@@ -4,9 +4,15 @@ on:
 env:
   CI: true
   TZ: Asia/Hong_Kong
+
+defaults:
+  run:
+    shell: bash
+    working-directory: blog
+
 jobs:
   deploy:
-    working-directory: blog
+
 #    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2

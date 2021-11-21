@@ -37,6 +37,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
+    <%- open_graph({
+      // image: page.thumbnail,
+      ...page
+    }) %>
+
     <!-- Custom CSS -->
     <%- css('css/style.css') %>
 
