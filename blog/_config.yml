@@ -7,7 +7,7 @@ title: Debugging Future
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: vincentlaucy
 language: en
 timezone: ''
 
@@ -106,9 +106,10 @@ theme: hollow
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:vincentlaucy/debuggingfuture.com.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  type: https
+  repo: https://github.com/vincentlaucy/debuggingfuture.com.git
   branch: gh-pages
+  token: $GITHUB_TOKEN
 
 feed:
   # Generate both atom and rss2 feeds
