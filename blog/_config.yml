@@ -106,10 +106,15 @@ theme: hollow
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
+  # not working as expected. only works fi repo url include token
+  # https://github.com/hexojs/hexo-deployer-git#deploy-with-token
+  # https://github.com/hexojs/hexo-deployer-git/issues/71
   type: git
-  repo: https://github.com/vincentlaucy/debuggingfuture.com.git
-  branch: gh-pages
-  token: $GITHUB_TOKEN
+  repo:
+    github:
+      url: https://github.com/vincentlaucy/debuggingfuture.com.git
+      branch: gh-pages
+      token: $GITHUB_TOKEN
 
 feed:
   # Generate both atom and rss2 feeds
