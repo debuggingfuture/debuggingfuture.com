@@ -13,12 +13,12 @@ _人大了發現寫甚麼只是讓自己有點活過的感覺，_
 _是種沒有市場的人生 NFT，而我需要。_
 _生日的願望，唯有「向死而生」。_
 ---
-_永井豪少時疑患重病，為了留下「存在過的証據」開創漫畫生涯，三一萬能俠和惡魔人開創了個時代。_
+_永井豪少時疑患重病，為了留下「存在過的証據」投入漫畫生涯，三一萬能俠和惡魔人開創了個時代。_
 _村西透拍的是 AV，卻拍出種使命感，要拍人在生死間的情欲與反差。_
 _在威瑪創立到被納綷殺校；包浩斯己死、包浩斯不滅。_
 _王維基說他是大酒店常客，為了思考死前最想留下甚麼。_
 _《十年》導演周冠威認為留在香港面對，最能心裏平安。_
-_《月黑高飛》說希望是危險的，救贖卻別無他門，_
+_《月黑高飛》說希望是危險的，救贖卻別無他門。_
 _田志仁在美國土生土長創作最美的遊戲配樂，我好奇他父母離開香港時是怎樣的心情。_
 _達文西的撲翼機沒成功飛過，卻留下了句「你飛過，便會認定天空是你心之所在」。_
 _向死而生，選擇原來唯有：Get busy living or get busing dying。_
@@ -32,7 +32,7 @@ _夢想如是、自由如是。_
 也許比《[立](https://debuggingfuture.com/stand/)》題得更早，
 理應先破後立，一直提不了筆，是份沈重。
 
-**破**，又一個被沾污的中文字，
+**破**，又一個被玷污的中文字，
 經歷過四舊四新，
 免不了帶點傷感，帶點野蠻。
 
@@ -61,21 +61,66 @@ Diaspora 式的格局己定，[對我又不陌生](siumai.md)。
 破惑、破格；破除終點前的迷雾，
 才能創出生機。
 
-起業失敗、失敗又再失敗過，
-工作種種，要開創甚麼，原來那樣難。
-越計較越輸不起，越默守成規、畏首畏尾，
-由心敬佩種種破格之人：
-各種離經叛道，不停突破之人，這世界需要更多；
-而更大的尊敬，是那些面對死亡擁抱生命之人。
-
 看到別人看不到的，相信別人不相信的；
 設限的往往只有自己。
 看破框住自己的是甚麼，
 才看到其實框外有甚麼。
 
+起業失敗、失敗又再失敗過，
+工作種種，要開創甚麼，原來那樣難。
+越計較越輸不起，越默守成規、畏首畏尾，
+由心敬佩種種破格之人：
+各種離經叛道，不停突破之人，這世界需要更多；
+而更大的尊敬，是那些面對死亡擁抱生命的。
 ---
 
 ## 破格
+
+伴隨成長的是《Evangelion》和種種機械人動畫。
+鐵甲萬能俠、三一不是我的年代，也總在機戰認識。
+
+Eva 驚艷的人機設定，心理描寫，
+抓住了我青春期的目光，
+那時未明為何經典，而經典背後還有經典。
+到看了紀念作《 Devilman crybaby》
+才重新認識永井豪。
+
+由監製過蠟筆小新，櫻桃小丸子的湯淺政明執導，又成了新的經典。
+![img](https://i.gzn.jp/img/2018/01/16/devilman-crybaby-go-nagai-masaaki-yuasa-interview/G00_0295.jpg)
+時光倒流50年去看，才明白《惡魔人》是劃時代神作。
+世人習慣神眼中的世界史觀，
+惡魔人意象源自但丁神曲，人走向滅絕，那惡魔眼中的世界觀。
+
+永井豪沒計劃太多大鋼伏線，
+隨故事發展探索自圓其說，
+這次卻成了個不朽結局與種獨特的暗黑風格，
+[《寄生獸》、《亞人》或《進擊的巨人》都有其影子](https://devilman-crybaby.com/genealogy/)。
+
+沒有《鐵甲萬能俠》，沒有人機合一；
+沒有《三一》，沒有合體變型玩具；
+沒有《甜心戰士》，沒有《美少女戰士》；
+沒有《惡魔人》，沒有 EVA。
+
+![img](https://64.media.tumblr.com/6098dbb744f761145eb22ca0ed46ed4d/tumblr_inline_p1wgh6LV061uuhw2b_1280.png)
+
+EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響：
+
+> 竹熊：EVA 有十二片翅膀吧。那是路西法嗎？
+> 庵野：是路西法的形象。結果我還是沒能擺脫《惡魔人》。真是沒辦法。
+> 大泉：TV 版播出的時候，我就擔心過如果《EVA》沒有像《惡魔人》那樣完結的話會怎麼辦？
+> 庵野：會和《惡魔人》一樣的。因為只有那樣的故事而已。---[《庵野秀明 スキゾ·エヴァンゲリオン》](https://www.bilibili.com/read/cv3988604)
+
+更好的故事或在場外。
+玉音放送後９月出生的永井豪，準備大學時誤以為患上大腸癌，
+覺悟「不知死亡何時來臨，總要留下存在過的証據，而不是讀書考試」，開始了漫畫創作生涯。
+
+> 「人間なんていつ死ぬか分からない。とにかく自分が生きた証拠をつめ跡ぐらいでもいいから残そう。受験勉強なんてしている場合じゃない」 ---[漫画革命40年　永井豪特集](https://www.nikkansports.com/special/nagai/2007/top-nagai.html)
+
+《破廉恥學園》受世人批判，永井堅持著。
+有人說最好的作品，不是創作者紀律或野心所至，而是創作者被吞噬。
+我相信永井豪僅是忠誠於自己創作而已。
+---
+
 
 Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
@@ -83,7 +128,7 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
 
 無視社會道德標準，
-從遠赴夏威夷從直升機拍攝AV被FBI逮捕量刑370年；
+從遠赴夏威夷以直升機拍攝AV被FBI逮捕量刑370年；
 經營的英語班雇用美軍逃兵、
 與黑道勾結、出版非法寫真集等等再7次被捕，
 批評都太容易，不需我代勞。
@@ -100,72 +145,27 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 
 當社會倫理規範本末倒置變得偽善，
 越多禁忌越多壓抑，人越追求刺激。
-村西一力推動產業，把人最原始的情慾釋放。
+村西一力推動產業，務求把人最原始的情慾釋放。
 
 奇才百年難遇，人性卻萬世如一。
 浮世繪流行的不只美人畫和漫畫， 還有春畫艷本描繪各種雲情雨態，
 大師葛飾北齋《蛸與海女》，露骨程度比鑽石影像更甚；
 喜多村歌磨的《艶歌枕撰》，也許[早畫了吉村卓的原型](https://www.britishmuseum.org/collection/object/A_OA-0-133-10)。
-不只是實用的嫁妝，還能保平安祈求槍彈不侵：性予力量於生。
+春畫不只是實用的嫁妝，還能保平安祈求槍彈不侵：性予力量於生。
 
-到德川吉宗禁艷本，[江戶人不屈](https://everylittled.com/article/124588)，
+到德川吉宗禁好色文學，[江戶人不屈](https://everylittled.com/article/124588)，
 轉往地下銷售不受檢閱，擺去限制題材更大膽，
-一流的畫師配上一流的印刷技術，
+一流的畫師配上一流的雕版技術，
 留下春畫兩三千件，結果數百年後在大雅之堂大英博物館展出。
 
 ![img](https://cdn-japantimes.com/wp-content/uploads/2015/12/n-shunga-a-20151226.jpg)
 > Shunga: Sex and Pleasure in Japanese Art exhibition, British Museum--- [Japan times](https://www.japantimes.co.jp/culture/2015/12/25/arts/exhibition-erotic-japanese-art-draws-200000-visitors/)
 
-串流平台尺道大更多主題，主演的山田孝之這次也是種突破。
-生意失敗進牢再負債５０億，也計比不少人生教練更有資格：人生最重要的，是失去希望時的自我，是不知所措時的自己。
+串流平台尺道大主題更多樣，主演的山田孝之這次也是種突破。
+生意失敗進牢再負債50億，也計比不少人生教練更有資格：人生最重要的，是失去希望時的自我，是不知所措時的自己。
 行業骯髒黑暗，剛需反成了泡沫爆破之際的經濟原動力，
+每個年代[社會的風氣權益也無法一概而論](https://www.storm.mg/lifestyle/53684?mode=whole)，
 各種說教信不信由你，**背後的生命力創造力卻無容置疑**。
-
----
-
-伴隨成長的是 Eva 和種種機械人動畫。
-鐵甲萬能俠、三一不是我的年代，也總在機戰認識。
-
-Eva 驚艷的人機設定，心理描寫，
-抓住了我青春期的目光
-那時未明為何經典，而經典背後還有經典
-到看了紀念作《 Devilman crybaby》
-才重新認識永井豪。
-
-由監製過蠟筆小新，櫻桃小丸子湯淺政明執導，又成了新的經典。
-![img](https://i.gzn.jp/img/2018/01/16/devilman-crybaby-go-nagai-masaaki-yuasa-interview/G00_0295.jpg)
-時光倒流 50 年去看，才明白《惡魔人》是劃時代神作。
-世人習慣神眼中的世界史觀，
-惡魔人意象源自但丁神曲，人走滅絕，惡魔眼中的世界觀。
-
-永井豪沒太多計劃故事大鋼伏線，
-隨故事發展探索自圓其說，
-這次卻成了不朽結局與暗黑風格，
-[《寄生獸》、《亞人》或《進擊的巨人》都有其影子](https://devilman-crybaby.com/genealogy/)
-
-沒有《鐵甲萬能俠》，沒有人機合一；
-沒有《三一》，沒有合體變型玩具；
-沒有《甜心戰士》，沒有《美少女戰士》；
-沒有《惡魔人》，沒有 EVA。
-
-![img](https://64.media.tumblr.com/6098dbb744f761145eb22ca0ed46ed4d/tumblr_inline_p1wgh6LV061uuhw2b_1280.png)
-
-EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
-
-> 竹熊：EVA 有十二片翅膀吧。那是路西法嗎？
-> 庵野：是路西法的形象。結果我還是沒能擺脫《惡魔人》。真是沒辦法。
-> 大泉：TV 版播出的時候，我就擔心過如果《EVA》沒有像《惡魔人》那樣完結的話會怎麼辦？
-> 庵野：會和《惡魔人》一樣的。因為只有那樣的故事而已。---[《庵野秀明 スキゾ·エヴァンゲリオン》](https://www.bilibili.com/read/cv3988604)
-
-更好的故事或在場外，有時候世界就需要離經叛道之人。
-玉音放送後９月出生的永井豪，準備大學時誤以為患上大腸癌，
-覺悟「不知死亡何時來臨，總要留下存在過的証據，而不是讀書考試」，開始了漫畫創作生涯。
-
-> 「人間なんていつ死ぬか分からない。とにかく自分が生きた証拠をつめ跡ぐらいでもいいから残そう。受験勉強なんてしている場合じゃない」 ---[漫画革命４０年　永井豪特集](https://www.nikkansports.com/special/nagai/2007/top-nagai.html)
-
-《破廉恥學園》受世人批判，永井堅持著。
-有人說最好的作品，不是創作者紀律或野心所至，而是創作者被吞噬。
-我相信永井豪僅是忠誠於自己創作而己。
 
 ---
 
@@ -183,8 +183,8 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 </div>
 
 成立短短數年間大放異彩，及後經歷數任校長各有所長擴展種種領域；在 Dessau 留下強調功能性和理性的經典校舍。　
-到納粹當道，極權主義要獨佔人的靈魂， Bauhaus 被抨撃
-蓋世太保封校，校長 Mies van der Rohe 與戰犯羅森堡(Alfred Rosenberg)談判，不甘妥協更改課程大鋼、撤去猶太藉教師的要求，寧願殺校。
+到納粹當道，極權主義要獨佔人的靈魂， Bauhaus被注定地抨撃。
+蓋世太保封校，校長密斯·凡德羅Mies van der Rohe 與戰犯羅森堡Alfred Rosenberg談判，不甘妥協更改課程大鋼、撤去猶太藉教師的要求，寧願殺校。
 
 ![img](https://pedialab.io/hero_image.jpg)
 
@@ -198,24 +198,23 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 ![img](https://made-in-wonder.com/images/item/1709/pic2.jpg)
 
-大師和和學生輾轉到了伊利諾理工學院，芝加哥設計學院，
+大師和和學生輾轉到了伊利諾理工學院、芝加哥設計學院，
 葛羅佩斯在哈佛任教，門生包括創造出羅浮宮和中銀大廈的貝聿銘，
 設計香港藝術中心至區旗區徽的何弢，
 以野獸派為名的 Paul Rudolph
---- 走過香港力寶中心和新加坡的鴻福中心，雙城對倒有某種熟悉感。
+--- 走過香港力寶中心和新加坡的鴻福中心，雙城對倒總有某種熟悉感。
 
 <p float="center">
   <img src="lippo.jpg" width="45%" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/The_Concourse_3%2C_Aug_07.JPG" width="45%" />
 </p>
 
-以色列移民湧入，多功能、簡潔的現代主義風格被追捧，來自歐洲的包浩斯學生們造就了[特拉维夫白城](https://zh.wikipedia.org/zh-hk/%E7%89%B9%E6%8B%89%E7%BB%B4%E5%A4%AB%E7%99%BD%E5%9F%8E)。
+20世紀初硝煙四起以色列大量移民湧入，多功能、簡潔的現代主義風格被追捧，來自歐洲的包浩斯學生們又造就了[特拉维夫白城](https://zh.wikipedia.org/zh-hk/%E7%89%B9%E6%8B%89%E7%BB%B4%E5%A4%AB%E7%99%BD%E5%9F%8E)。
 
-類近的故事：[迎合快速增長的功能主導風格在香港和新加坡的公屋設計得到伸張](https://www.straitstimes.com/lifestyle/arts/modern-buildings-with-bauhaus-traits)
+類近的故事：[迎合快速增長的功能主導風格在香港和新加坡的公屋設計得到伸張](https://www.straitstimes.com/lifestyle/arts/modern-buildings-with-bauhaus-traits)，
 彩虹邨，蘇屋邨，美荷樓等，不為「打卡」而生，卻功能美感並重。
 
-另一包浩斯學生鮑立克 Paulick，到上海當年的聖約翰大學任教。
-國共內戰，[在上海或國外留學的來到香港成為第一代香港華人建築師](https://www.thestandnews.com/city/%E4%B8%AD%E7%92%B0%E8%A1%97%E5%B8%82%E5%8F%8A%E5%8C%85%E6%B5%A9%E6%96%AF%E5%9C%A8%E9%A6%99%E6%B8%AF%E7%9A%84%E7%A8%AE%E5%AD%90)。其中范文照的作品有[九龍靈糧堂教堂、北角循道衛理堂](https://www.hk01.com/%E5%91%A8%E5%A0%B1/344267/%E7%99%BE%E5%B9%B4%E5%8C%85%E6%B5%A9%E6%96%AF-%E4%BA%8C-%E9%A6%99%E6%B8%AF%E4%B9%9F%E6%9C%89%E5%8C%85%E6%B5%A9%E6%96%AF-%E5%8D%97%E4%BE%86%E5%BB%BA%E7%AF%89%E5%A4%A7%E5%B8%AB%E5%B8%B6%E4%BE%86%E5%82%B3%E4%B8%96%E5%82%91%E4%BD%9C)，瑪利諾中學和九華的小教堂是出自陸謙受。
+另一包浩斯學生鮑立克 Paulick，則到上海當年的聖約翰大學任教。國共內戰，[在上海或國外留學的來到香港成為第一代香港華人建築師](https://www.thestandnews.com/city/%E4%B8%AD%E7%92%B0%E8%A1%97%E5%B8%82%E5%8F%8A%E5%8C%85%E6%B5%A9%E6%96%AF%E5%9C%A8%E9%A6%99%E6%B8%AF%E7%9A%84%E7%A8%AE%E5%AD%90)。其中范文照的作品有[九龍靈糧堂教堂、北角循道衛理堂](https://www.hk01.com/%E5%91%A8%E5%A0%B1/344267/%E7%99%BE%E5%B9%B4%E5%8C%85%E6%B5%A9%E6%96%AF-%E4%BA%8C-%E9%A6%99%E6%B8%AF%E4%B9%9F%E6%9C%89%E5%8C%85%E6%B5%A9%E6%96%AF-%E5%8D%97%E4%BE%86%E5%BB%BA%E7%AF%89%E5%A4%A7%E5%B8%AB%E5%B8%B6%E4%BE%86%E5%82%B3%E4%B8%96%E5%82%91%E4%BD%9C)；瑪利諾中學和九華的小教堂是出自陸謙受。
 
 
 > **Das Bauhaus ist tot. Es lebe das Bauhaus.**
@@ -227,7 +226,7 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 歷久不衰，[Villa Tugendhat 百年過還後像摩登豪宅](https://www.youtube.com/watch?v=VmtKiBH02dk)；
 高度理性，以 Piet Mondrian 聞名的荷蘭風格派 [De Stijl](https://artincontext.org/de-stijl-art/)又因包浩斯發揚光大，
 
-包浩斯強大的生命力融入建築、藝術家俱設計及教育制度，[百年各種創作有意無意被影響或暗合](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)，如催出了[更符合消費主義的 IKEA](https://www.smh.com.au/entertainment/art-and-design/how-ikea-revolutionised-homewares-20100913-158ji.html)。
+包浩斯強大的生命力融入建築、藝術、家俱設計及教育制度，[百年各種創作有意無意被影響或暗合](https://www.bloomberg.com/news/articles/2019-03-11/100-years-later-how-the-bauhaus-resisted-nazi-germany)，如催出了[更符合消費主義的 IKEA](https://www.smh.com.au/entertainment/art-and-design/how-ikea-revolutionised-homewares-20100913-158ji.html)。
 
 界定「是不是包浩斯」早以太難，也不重要，
 **重要是其今天不能否認的存在。**
@@ -237,6 +236,17 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 ![img](https://i.ytimg.com/vi/OmGVMadSTLk/maxresdefault.jpg)
 
 > Piet Mondrian, Perfume《Display》
+
+---
+
+各種破立建構出人所處的世界，
+又唯有破妄破執，才找出真正所屬的世界。
+
+<div lang="en">
+
+> Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it...... Once you learn that, you'll never be the same again. --- [Steve Jobs](https://www.youtube.com/watch?v=kYfNvmF0Bqw)
+
+</div>
 
 ---
 
@@ -259,22 +269,10 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 一次死裏逃生後人生脆弱，他憑心做事、相信教育教養所帶領的感情力量。
 在王維基的世界觀，最後悔的是「沒有嘗試」，那種夢魘令人靈魂也不得安息。
 時代變化快，新事物新機會用過往經驗判斷無謂；
-當世事不能預料，能料的唯有自己心中那團火。
+**當世事不能預料，能料的唯有自己心中那團火。**
 最鐘愛的事情，能破釜沉舟投入最大的力量試，才做得最好。
 
 ---
-
-各種破立建構出我所處的世界，
-又唯有破妄破執，才找出我真正所屬的世界。
-
-<div lang="en">
-
-> Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it...... Once you learn that, you'll never be the same again. --- [Steve Jobs](https://www.youtube.com/watch?v=kYfNvmF0Bqw)
-
-</div>
-
----
-
 面對社會動璗，《十年》的導演周冠威，選擇再拍攝紀錄片。
 
 {% youtube nHTx5NzKRRA %}
@@ -288,7 +286,7 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 不由環境政權罷布生命，
 任何苦難或際遇都不重要，
-專注於更大的追求，是種自主與殉道　的信仰。
+他專注於更大的追求：一種自主與殉道的信仰。
 
 ---
 
@@ -297,7 +295,7 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 ![img](redemption.jpg)
 > Fear Can hold You Prisoner, Hope Can Set You Free
 
-90 年代的電影《月黑高飛 Shawshank Redemption》,
+90年代的電影《月黑高飛 Shawshank Redemption》,
 票房失利，憑錄影帶和電視卻有口皆碑；
 成為不朽神作，拍的是另類美國夢：一個人敢想多遠，能走多遠。
 
@@ -320,7 +318,6 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 ![img](https://i.imgur.com/egbVHi4.gif)
 
-
 身邊的圍牆，讓你從反抗，到習慣再依賴；
 體制總磨滅心志，在現實棱角往往被磨平。
 如戲中摩根費曼飾演的獄友告誡**希望是危險的**，追尋理想從不浪漫，
@@ -340,8 +337,8 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 ---
 
-80 年代一對香港夫婦移民到矽谷 Palo Alto，
-兒子成了不折不扣的美國人。音樂才華洋溢，熱愛古音樂又鍾情爵士樂、歌劇和 90 年代三藩市的狂野。考進 Stanford ，同房是遊戲設計師，設計的是耗了我不少光陰、啟蒙種種歷史文化知識的《文明帝國》（Civilization）。
+80年代一對香港夫婦移民到矽谷 Palo Alto，
+兒子成了不折不扣的美國人。音樂才華洋溢，熱愛古音樂又鍾情爵士樂、歌劇和90年代三藩市的狂野。考進 Stanford ，同房是遊戲設計師，設計的是耗了我不少光陰、啟蒙種種歷史文化知識的《文明帝國》（Civilization）。
 
 《文明4》「如期落後」急需找人設計主題曲，畢業後同房 Reunion 一拍即合，[從小就接觸文明系列的田志仁一口答應](https://www.youtube.com/watch?v=IuqAxQbxrzM)，從太空回望地球日出東升的簡單構圖發想，一直伙拍的非洲合唱團以 Swahili 禱文作主題配上系列首次推出的宗教系統，結果作品 Baba Yetu 成了[首個得艾美獎的電腦遊戲音樂](https://en.wikipedia.org/wiki/Christopher_Tin#GRAMMY_Awards)；田志仁成了 Reddit 上最炙手可熱的作曲家，[在 Kickstarter 錄得破記錄的銷售](https://www.kickstarter.com/projects/christophertin/new-album-by-christopher-tin-baba-yetu-civilizatio)。
 
@@ -371,7 +368,7 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 **認定那是你心之所在。**
 **夢想如是、自由如是**。
 
-達文西發想出撲翼機，到了 400 年後萊特兄弟才飛上天，
+達文西發想出撲翼機，到了400年後萊特兄弟才飛上天，
 希望的種子，也許又比一切重要。
 
 從來很怕那種全沒意義，套個「某藉華人」去沾個甚麼光。
