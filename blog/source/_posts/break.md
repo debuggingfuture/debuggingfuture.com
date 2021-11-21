@@ -345,6 +345,8 @@ EVA 那結局，人大了才看得懂， 庵野秀明直言受惡魔人影響
 
 《文明4》「如期落後」急需找人設計主題曲，畢業後同房 Reunion 一拍即合，[從小就接觸文明系列的田志仁一口答應](https://www.youtube.com/watch?v=IuqAxQbxrzM)，從太空回望地球日出東升的簡單構圖發想，一直伙拍的非洲合唱團以 Swahili 禱文作主題配上系列首次推出的宗教系統，結果作品 Baba Yetu 成了[首個得艾美獎的電腦遊戲音樂](https://en.wikipedia.org/wiki/Christopher_Tin#GRAMMY_Awards)；田志仁成了 Reddit 上最炙手可熱的作曲家，[在 Kickstarter 錄得破記錄的銷售](https://www.kickstarter.com/projects/christophertin/new-album-by-christopher-tin-baba-yetu-civilizatio)。
 
+![img](https://i.ytimg.com/vi/IJiHDmyhE1A/maxresdefault.jpg)
+
 當初許多人否定擁有古典音樂學術背景的他為電動遊戲作曲，怕被定型。
 而田志仁覺得新鮮有趣有挑戰性，作品為他展開專業創作生涯，[更推翻了過創作電玩音樂是「不務正業」的負面形象。](http://www.chinesedaily.com/info_People.asp?idno=54)
 
