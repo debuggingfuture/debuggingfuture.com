@@ -346,7 +346,7 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 70年代一對香港夫婦移民到矽谷 Palo Alto，
 兒子成了不折不扣的美國人。音樂才華洋溢，熱愛古音樂又鍾情爵士樂、歌劇和90年代三藩市的狂野。考進 Stanford ，同房是遊戲設計師，設計的是耗了我不少光陰、啟蒙種種歷史文化知識的《文明帝國》（Civilization）。
 
-《文明4》「如期落後」急需找人設計主題曲，畢業後同房 Reunion 一拍即合，[從小就接觸文明系列的田志仁一口答應](https://www.youtube.com/watch?v=IuqAxQbxrzM)，從太空回望地球日出東升的簡單構圖發想，一直伙拍的非洲合唱團以 Swahili 禱文作主題配上系列首次推出的宗教系統，結果作品 Baba Yetu 成了[首個得艾美獎的電腦遊戲音樂](https://en.wikipedia.org/wiki/Christopher_Tin#GRAMMY_Awards)；田志仁成了 Reddit 上最炙手可熱的作曲家，[在 Kickstarter 錄得破記錄的銷售](https://www.kickstarter.com/projects/christophertin/new-album-by-christopher-tin-baba-yetu-civilizatio)。
+《文明4》「如期落後」急需找人設計主題曲，畢業後同房Reunion一拍即合，[從小就接觸文明系列的田志仁一口答應](https://www.youtube.com/watch?v=IuqAxQbxrzM)，從太空回望地球日出東升的簡單構圖發想，找一直伙拍的非洲合唱團以Swahili禱文作主題配上系列首次推出的宗教系統，結果作品《Baba Yetu》成了[首個得艾美獎的電腦遊戲音樂](https://en.wikipedia.org/wiki/Christopher_Tin#GRAMMY_Awards)；田志仁是Reddit上最炙手可熱的作曲家，[在 Kickstarter 錄得破記錄的銷售](https://www.kickstarter.com/projects/christophertin/new-album-by-christopher-tin-baba-yetu-civilizatio)。
 
 ![img](https://i.ytimg.com/vi/IJiHDmyhE1A/maxresdefault.jpg)
 
