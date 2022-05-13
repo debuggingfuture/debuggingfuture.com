@@ -9,8 +9,8 @@ date: 1988-11-18
 
 ---
 Email: lauchunyin@debuggingfuture.com / lauchunyin@gmail.com
-Matrix: @vincentlcy:matrix.org
 Github: https://github.com/vincentlaucy
+Linkedin: https://www.linkedin.com/in/vincentlaucy/
 ---
 Blog: https://debuggingfuture.com
 Atom: https://debuggingfuture.com/atom.xml
