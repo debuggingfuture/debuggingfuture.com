@@ -11,6 +11,7 @@ date: 1988-11-18
 Email: lauchunyin@debuggingfuture.com / lauchunyin@gmail.com
 Github: https://github.com/vincentlaucy
 Linkedin: https://www.linkedin.com/in/vincentlaucy/
+Discord: vincentlaucy#2372
 ---
 Blog: https://debuggingfuture.com
 Atom: https://debuggingfuture.com/atom.xml
