@@ -2,24 +2,6 @@
     //migrated from nuxt
     const tagsMeta = [
     {
-      title: 'vincent',
-      titleCht: '',
-      tags: [
-        {
-          tag: 'motto',
-          tagCht: '箴'
-        },
-        {
-          tag: 'collaboration',
-          tagCht: '合作'
-        },
-        {
-          tag: 'about',
-          tagCht: 'About'
-        }
-      ]
-    },
-    {
       title: 'work',
       titleCht: '作',
       tags: [
@@ -89,14 +71,20 @@
 </script>
 
 <div id="navbar">
-  <% tagsMeta.forEach(function(tagMeta){ %>
     <ul class="tags">
+	<li>
+        <a href="/about">
+		Vincent
+        </a>
+	<li>
+  	<% tagsMeta.forEach(function(tagMeta){ %>
       <li >
         <a href="/categories/<%= tagMeta.title %>" onClick="onClickTagMeta('<%= tagMeta.title %>');">
             <%= tagMeta.title %> <%= tagMeta.titleCht %>
         </a>
       </li>
+
+ 	 <% }); %>
     </ul>
-  <% }); %>
 
 </div>

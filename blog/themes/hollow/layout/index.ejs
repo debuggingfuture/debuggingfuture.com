@@ -1,34 +1,30 @@
 <!-- Go Site -->
 <%- partial('_partial/gosite') %>
 
-
 <!-- Main Content -->
 <section>
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
       <h1 class="title">Debug 未來</h1>
-        <%- partial('_partial/backhome') %>
-      </div>
-        <div class="row">
-        <%- partial('_partial/nav') %>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <%- (page.posts.findOne({slug: 'intro'})||{}).content %>
-
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <% page.posts.each(function(item){ %>
-                    <%- partial('_partial/article-index', {item: item}) %>
-                <% }); %>
-            </div>
-        </div>
-        <!-- Pagination -->
-        <%- partial('_partial/pagination') %>
-        <!-- Search -->
-        <%- partial('_partial/search') %>
+      <%- partial('_partial/backhome') %>
     </div>
+    <div class="row"><%- partial('_partial/nav') %></div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <%- (page.posts.findOne({slug: 'intro'})||{}).content %>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <% page.posts.filter(item => !['intro'].includes(item.slug)
+        ).each(function(item){ %> <%- partial('_partial/article-index', {item:
+        item}) %> <% }); %>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <%- partial('_partial/pagination') %>
+    <!-- Search -->
+    <%- partial('_partial/search') %>
+  </div>
 </section>
