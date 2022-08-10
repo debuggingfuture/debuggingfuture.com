@@ -5,9 +5,8 @@ categories: [vincent]
 date: 1988-11-18
 ---
 
-<p> </p>
 <div class="center socials">
-    <a  href="https://t.me/debuggingfuture">
+    <a  href="https://twitter.com/debuggingfuture">
         <i class="fa fa-brands fa-twitter"  alt="Twitter"></i>
         @debuggingfuture
     </a>
@@ -33,8 +32,6 @@ date: 1988-11-18
     </a>
 </div>
 
----
-
 <div class="center">
 I also organize <a href="https://web3devs.community">@Web3Devs.Community</a>
 </div>
@@ -43,6 +40,8 @@ I also organize <a href="https://web3devs.community">@Web3Devs.Community</a>
 
 <div class="center">
 Blog: https://debuggingfuture.com
-Atom: https://debuggingfuture.com/atom.xml
-RSS: https://debuggingfuture.com/rss2.xml
+
+<a href="https://debuggingfuture.com/atom.xml"><i class="fa fa-solid fa-rss" alt="Atom"></i>Atom</a>
+<a href="https://debuggingfuture.com/rss2.xml"><i class="fa fa-solid fa-rss" alt="RSS"></i>RSS</a>
+
 </div>
