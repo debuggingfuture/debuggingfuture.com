@@ -8,23 +8,27 @@ date: 1988-11-18
 <p> </p>
 <div class="center socials">
     <a  href="https://t.me/debuggingfuture">
-        <i class="fa fa-brands fa-telegram"></i>
+        <i class="fa fa-brands fa-twitter"  alt="Twitter"></i>
+        @debuggingfuture
+    </a>
+    <a  href="https://t.me/debuggingfuture">
+        <i class="fa fa-brands fa-telegram"  alt="Telegram"></i>
         @debuggingfuture
     </a>
     <a  href="https://discord.com/users/debuggingfuture#2372">
-        <i class="fa fa-brands fa-discord"></i>
+        <i class="fa fa-brands fa-discord"  alt="Discord"></i>
         debuggingfuture#2372
     </a>
     <a  href="https://www.linkedin.com/in/vincentlaucy/">
-        <i class="fa fa-brands fa-linkedin"></i>
+        <i class="fa fa-brands fa-linkedin" alt="Linkedin"></i>
         Vincent Lau
     </a>
     <a  href="https://github.com/vincentlaucy">
-        <i class="fa fa-brands fa-github"></i>
+        <i class="fa fa-brands fa-github"  alt="Github"></i>
         vincentlaucy
     </a>
     <a  href="mailto:hi@debuggingfuture.com">
-        <i class="fa fa-solid fa-envelope"></i>
+        <i class="fa fa-solid fa-envelope" alt="Email"></i>
         hi@debuggingfuture.com
     </a>
 </div>
