@@ -112,7 +112,7 @@ deploy:
   type: git
   repo:
     github:
-      url: https://github.com/vincentlaucy/debuggingfuture.com.git
+      url: https://github.com/debuggingfuture/debuggingfuture.com.git
       branch: gh-pages
       token: $GITHUB_TOKEN
 
