@@ -12,11 +12,11 @@ After 15 years I'm finally in Germany again, with a purpose.
 
 ![img](berlin24.jpg)
 
-I was an exchange student in Bonn. Besides drank enough beer to fill a swimming pool and took 30+ budget flights travelling around, I also studied some Microeconomics and Distributed Systems. I was "too early" as Vitalik was still playing World of Warcraft and little did I imagine how game theories and consensus algorithms that I learned together with various technologies were going to transform our world.
+I was an exchange student in Bonn. Besides drank enough beer to fill a swimming pool and took 30+ budget flights travelling around, I also studied some Microeconomics and Distributed Systems. "Too early" as Vitalik was still playing World of Warcraft and little did I imagine how game theories and consensus algorithms that I learned together with various technologies were going to transform our world.
 
-With detours in my career, I'm back to where I started and look for impactful, open technologies that I could commit my time to, and ponder what my role is the rapidly changing world with all sort of new possibilities. 
+Time flies, with detours in my career, I'm back to where I started and look for impactful, open technologies that I could commit my time to, and ponder what my role is in the rapidly changing world with all sort of new possibilities. 
 
-Thus I came to the historic, rebellious city to pick up my memories and participate the "co-living" experience ZuBerlin, which is a 2 weeks mini-[Zuzalu](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/) for online communities connected by values coming together to materialize a mini-village in our timespace.
+I came to the historic, rebellious city to pick up my memories and participate the "co-living" experience ZuBerlin, which is a 2 weeks mini-[Zuzalu](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/) for online communities connected by values coming together to materialize a mini-village in our timespace.
 
 ---
 
