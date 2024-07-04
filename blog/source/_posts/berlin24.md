@@ -24,7 +24,7 @@ For some reasons, Core Devs of Ethereum are named as [Magicians](https://ethereu
 
 But that's exactly why I'm here. 
 
-Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critiques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurrent distributed call met in real life and presented ideas, jammed designs and implementation with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
+Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critiques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurring distributed call met in real life and presented ideas, jammed designs and implementation with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
 
 ![img](https://pbs.twimg.com/media/GP-OxuoW8AAAUOM?format=jpg&name=large)
 
