@@ -51,11 +51,15 @@ Identifying myself as a builder, thie trip won't be completed without getting my
 ---
 
 
-{% gp 2-2 %}
-![img](berlin_old.jpg)
-![img](berlin_new.jpg)
-{% endgp %}
 
+<div class="row">
+  <div class="col-md-6">
+    ![img](berlin_old.jpg)
+  </div>
+  <div class="col-md-6">
+![img](berlin_new.jpg)
+  </div>
+</div>
 
 
 Probably I've watched too many eposides of ["The Dark"](https://en.wikipedia.org/wiki/Dark_(TV_series)), I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
