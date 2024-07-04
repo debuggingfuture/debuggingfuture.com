@@ -50,6 +50,10 @@ Identifying myself as a builder, thie trip won't be completed without getting my
 
 ---
 
+
+![img](berlin_old.jpg)
+![img](berlin_new.jpg)
+
 Probably I've watched too many eposides of ["The Dark"](https://en.wikipedia.org/wiki/Dark_(TV_series)), I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
 
 Allow me to have indulged in nostalgia, picking up memories from bookstores to supermarket, from the Reichtag to the Brandenburg Gate. I got a chance to have a dialogue with my younger self, pondered what I wished and feared. Different ambitions, still the curious and somehow idealistic person, perhaps. "Vorbei ist Vorbei", I can't change the past, but I'm gateful this trip helped me to reflect and reimagine what are paths I could be taking as I open a new chapter of my career and life.
