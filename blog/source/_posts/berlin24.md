@@ -46,11 +46,11 @@ Don't get me wrong, there is nothing sacred and the Ethereum ecosystem is a mess
 
 Frankly speaking, the logistics is far from perfect and algining expectations of a diverse audience fairly and transparently is fundamentally challenging, but that's the point as we come here to join an [experiment](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/).
 
-Identifying myself as a builder, thie trip won't be complete without getting my hands dirty on new ideas. With the motiv of creating "Community Notes" to make the experience more inclusive. Ended up with a scrappy demo but I'm pretty proud to have written code for the UI & smart contract on my flight back to Singapore without Internet, making to the submission deadline when I land in Singapore Airport. Can't be more happy getting the "Silver Squirrel" prize covering my trip.   
+Identifying myself as a builder, thie trip won't be completed without getting my hands dirty on new ideas. With the motiv of creating "Community Notes" to make the experience more inclusive. Ended up with a scrappy demo but I'm pretty proud to have written code for the UI & smart contract on my flight back to Singapore without Internet, making to the submission deadline when I land in Singapore Airport. Can't be more happy getting the "Silver Squirrel" prize covering my trip.   
 
 ---
 
-Probably I've watched too much eposides of ["The Dark"](https://en.wikipedia.org/wiki/Dark_(TV_series)), I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
+Probably I've watched too many eposides of ["The Dark"](https://en.wikipedia.org/wiki/Dark_(TV_series)), I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
 
 Allow me to have indulged in nostalgia, picking up memories from bookstores to supermarket, from the Reichtag to the Brandenburg Gate. I got a chance to have a dialogue with my younger self, pondered what I wished and feared. Different ambitions, still the curious and somehow idealistic person, perhaps. "Vorbei ist Vorbei", I can't change the past, but I'm gateful this trip helped me to reflect and reimagine what are paths I could be taking as I open a new chapter of my career and life.
 
