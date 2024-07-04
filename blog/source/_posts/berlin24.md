@@ -24,7 +24,7 @@ For some reasons, Core Devs of Ethereum are named as [Magicians](https://ethereu
 
 But that's exactly why I'm here. 
 
-Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurrent distributed call met in real life and presented ideas, jammed designs and implementation with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
+Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critiques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurrent distributed call met in real life and presented ideas, jammed designs and implementation with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
 
 ![img](https://pbs.twimg.com/media/GP-OxuoW8AAAUOM?format=jpg&name=large)
 
@@ -50,7 +50,7 @@ Identifying myself as a builder, thie trip won't be complete without getting my 
 
 ---
 
-Probably I've watched too much eposides of "The Dark", I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
+Probably I've watched too much eposides of ["The Dark"](https://en.wikipedia.org/wiki/Dark_(TV_series)), I wonder which year I'm in, walking along the platforms of Deutsche Bahn stations. From color palette of train schedules to the smell after a football match, as an revisiting outsider, Germany didnt seems to have changed much. Did I? 
 
 Allow me to have indulged in nostalgia, picking up memories from bookstores to supermarket, from the Reichtag to the Brandenburg Gate. I got a chance to have a dialogue with my younger self, pondered what I wished and feared. Different ambitions, still the curious and somehow idealistic person, perhaps. "Vorbei ist Vorbei", I can't change the past, but I'm gateful this trip helped me to reflect and reimagine what are paths I could be taking as I open a new chapter of my career and life.
 
