@@ -40,7 +40,7 @@ It's a peacful sunny afternoon. Vitalik, having just wrapped up a presentation o
 
 Symbolic as it is, as an average individual who spent many of my waking hours overthinking on problems and anguishing over my trading position or social status, it is good to stop for a moment, discard my non-European expectation of "efficiency" and join the geeky but wise and thoughtful ones to embrace a bit of techno-optimism, to celebrate the beauty of mathematics, applied by clever engineering in AI & crypto, and to appreciate the communities empowered by technologies to shape a better world as ["humanity is deeply good"](https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html#dacc). 
 
-That optimism, is what truly motivate us building here. Once again I'm convinced blockchain isnt only about technology, [but also the culture](https://vitalik.eth.limo/general/2024/05/29/l2culture.html#:~:text=The%20core%20value%20proposition%20of,infrastructure%20to%20achieve%20those%20values.), not only the [Smart contracts but also the social contracts](https://vitalik.eth.limo/general/2021/03/23/legitimacy.html)
+That optimism, is what truly motivate us building here. Once again I'm convinced blockchain isnt only about technology, [but also the culture](https://vitalik.eth.limo/general/2024/05/29/l2culture.html#:~:text=The%20core%20value%20proposition%20of,infrastructure%20to%20achieve%20those%20values.), not just [smart contracts but also the social contracts.](https://vitalik.eth.limo/general/2021/03/23/legitimacy.html)
 
 Don't get me wrong, there is nothing sacred and the Ethereum ecosystem is a mess. But it's a working mess, a permissionless, forkable technology that likeminds are building upon.  
 
