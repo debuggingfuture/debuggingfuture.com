@@ -24,7 +24,7 @@ For some reasons, Core Devs of Ethereum are named as [Magicians](https://ethereu
 
 But that's exactly why I'm here. 
 
-Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critiques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurring distributed call met in real life and presented ideas, jammed designs and implementation with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
+Excited that I got a chance to witness how Ethereum is being built. Decentralized, open discourses are conducted that welcome ideas and critiques. People with all sorts of background commit to build on Ethereum and some become leading contributors. Faces in recurring distributed calls met in real life to present ideas, jam on designs and implementations with solutions that [work suprisingly well](https://x.com/drakefjustin/status/1801321889152835758). Decentralization works, when, literally, so much is at stake. 
 
 ![img](https://pbs.twimg.com/media/GP-OxuoW8AAAUOM?format=jpg&name=large)
 
@@ -42,7 +42,7 @@ Symbolic as it is, as an average individual who spent many of my waking hours ov
 
 That optimism, is what truly motivate us building here. Once again I'm convinced blockchain isnt only about technology, [but also the culture](https://vitalik.eth.limo/general/2024/05/29/l2culture.html#:~:text=The%20core%20value%20proposition%20of,infrastructure%20to%20achieve%20those%20values.), not only the [Smart contracts but also the social contracts](https://vitalik.eth.limo/general/2021/03/23/legitimacy.html)
 
-Don't get me wrong, there is nothing sacred and Ethereum ecosystems is a mess. But it's a working mess, a permissionless, forkable technology that likeminds could build upon.  
+Don't get me wrong, there is nothing sacred and the Ethereum ecosystem is a mess. But it's a working mess, a permissionless, forkable technology that likeminds are building upon.  
 
 Frankly speaking, the logistics is far from perfect and algining expectations of a diverse audience fairly and transparently is fundamentally challenging, but that's the point as we come here to join an [experiment](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/).
 
