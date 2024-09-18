@@ -46,7 +46,7 @@ Don't get me wrong, there is nothing sacred and the Ethereum ecosystem is a mess
 
 Frankly speaking, the logistics was far from perfect and algining expectations of a diverse audience fairly and transparently is fundamentally challenging, but that's the point as we came here to join an [experiment](https://www.palladiummag.com/2023/10/06/why-i-built-zuzalu/) and tribute to the tremendous effort with all the good intentions in putting it together.
 
-Identifying myself as a builder, thie trip won't be completed without getting my hands dirty on new ideas. With the motiv of creating "Community Notes" to make the experience more inclusive. Ended up with a scrappy demo but I'm pretty proud to have written code for the UI & smart contract on my flight back to Singapore without Internet, making to the submission deadline when I land in Singapore Airport. Can't be more happy getting the "Silver Squirrel" prize covering my trip.   
+Identifying myself as a builder, thie trip won't be completed without getting my hands dirty on new ideas. With the motiv of creating "Community Notes" to make the experience more inclusive, I ended up with a scrappy demo but pretty proud to have written code for the UI & smart contract on my flight back to Singapore without Internet, making to the submission deadline when I land in Singapore Airport. Can't be more happy getting the "Silver Squirrel" prize covering my trip.   
 
 ---
 
