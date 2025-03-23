@@ -2,6 +2,8 @@ I believe in open source, fair, decentralized technologies and organizations, tr
 
 Currently I focus on my Dev Studio [Fractal Box](https://fractal.box/), where we strive to create infrastructure & services to put [AI on chain](https://www.placeholder.vc/blog/2023/10/23/artificial-intelligence-belongs-onchain). We work on projects related to decentralized computing, AI agents coordination protocols and more. 
 
+I like to keep up my learning by experimenting with different ideas on my own or at hackathons, check it out[here](/categories/work/). I also organize developer communities & build on public goods / civic hacking projects since 2011.
+
 It\'s our mission to make Technologies and Education empowering individuals so the world stays free, open, permissive, innovative and equal.
 
 Worked in bank/startups, I\'m inspired by [Indie Hacker](https://www.indiehackers.com/), Company of One & [Companies being more transparent](https://www.slideshare.net/Bufferapp/buffer-culture-04), business models powered by fair games.
@@ -17,12 +19,11 @@ It\'s promised AI will give us more leisure and unleash our creativity. What if 
 
 Fan of OSS, [Self-hosted](https://www.reddit.com/r/selfhosted/), decentralizing the cloud with [Compute Over Data](https://github.com/bacalhau-project/bacalhau) & [FinOps](https://www.finops.org/) in industry.
 
-Mottos, iterating:
+---
 
-Fan of OSS, Public Goods, [Self-host](https://www.reddit.com/r/selfhosted/), [Compute Over Data](https://docs-ipfs-tech.ipns.dweb.link/concepts/cod/) & (https://www.finops.org/) in industry.
+Subscribe via [RSS/Atom](https://debuggingfuture.com/atom.xml) or substack
 
-
-Check out some of my projects [here](/categories/work/)
+<iframe src="https://debuggingfuture.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
 
 
 ### Mottos, iterating:
