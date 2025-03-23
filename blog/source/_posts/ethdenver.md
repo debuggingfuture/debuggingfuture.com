@@ -1,12 +1,15 @@
 ---
-title: Hack @ ETHdenver
-tags: [eth]
+title: Hack - SEELE @ ETHdenver
+tags: [eth, hack]
 categories: [work, project]
 date: 2026-01-01
 ---
 
 
+[Project on Devfolio](https://devfolio.co/projects/seele-3477)
+
 Our team hacked at ETHDenver and won Top 3 projects in DAO track!
+
 
 
 

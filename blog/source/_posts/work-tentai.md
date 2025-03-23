@@ -1,6 +1,6 @@
 ---
 title: Hack - Tentai
-tags: [hack]
+tags: [eth, hack]
 categories: [work]
 date: 2022-08-03
 thumbnail: ./tentai.jpg
