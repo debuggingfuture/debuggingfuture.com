@@ -1,6 +1,0 @@
-Finite
-
-Outgrow
-
-Limit protect
-
