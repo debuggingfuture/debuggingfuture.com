@@ -91,7 +91,9 @@ Eva 驚艷的人機設定，心理描寫，
 才重新認識永井豪。
 
 由監製過蠟筆小新，櫻桃小丸子的湯淺政明執導，又成了新的經典。
+
 ![img](https://i.gzn.jp/img/2018/01/16/devilman-crybaby-go-nagai-masaaki-yuasa-interview/G00_0295.jpg)
+
 時光倒流50年去看，才明白《惡魔人》是劃時代神作。
 世人習慣神眼中的世界史觀，
 惡魔人意象源自但丁神曲，人走向滅絕，那惡魔眼中的世界觀。
@@ -161,10 +163,7 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 到德川吉宗禁好色文學，[江戶人不屈](https://everylittled.com/article/124588)，
 轉往地下銷售不受檢閱，擺去限制題材更大膽，
 一流的畫師配上一流的雕版技術，
-留下春畫兩三千件，結果數百年後在大雅之堂大英博物館展出。
-
-![img](https://cdn-japantimes.com/wp-content/uploads/2015/12/n-shunga-a-20151226.jpg)
-> Shunga: Sex and Pleasure in Japanese Art exhibition, British Museum--- [Japan times](https://www.japantimes.co.jp/culture/2015/12/25/arts/exhibition-erotic-japanese-art-draws-200000-visitors/)
+留下春畫兩三千件，結果[數百年後在大雅之堂大英博物館展出。](https://www.artsy.net/article/the-british-museum-revealing-more-the-british-museums-shunga-exhibition)
 
 串流平台尺道大主題更多樣，主演的山田孝之這次也是種突破。
 生意失敗進牢再負債50億，也計比不少人生教練更有資格：人生最重要的，是失去希望時的自我，是不知所措時的自己。
@@ -191,7 +190,8 @@ Netflix 《全裸監督》大熱，拍日本泡沫盛世的奇才村西透。
 到納粹當道，極權主義要獨佔人的靈魂， Bauhaus被注定地抨撃。
 蓋世太保封校，校長密斯·凡德羅Mies van der Rohe 與戰犯羅森堡Alfred Rosenberg談判，不甘妥協更改課程大鋼、撤去猶太藉教師的要求，寧願殺校。
 
-![img](https://pedialab.io/hero_image.jpg)
+![img](/bauhaus.jpg)
+
 
 包浩斯解散了，理念卻沒有死。
 人材逃難到美國法國和以色列等各地，也許還更造就其 flourish。
