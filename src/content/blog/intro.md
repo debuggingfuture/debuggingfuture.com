@@ -1,3 +1,9 @@
+---
+title: intro
+date: 2024-01-01
+
+---
+
 I believe in open source, [local-first](https://localfirstweb.dev/), fair, decentralized technologies and organizations, trying to build some.
 
 Currently I focus on my Dev Studio [Fractal Box](https://fractal.box/), where we strive to create infrastructure & services to put [AI on chain](https://www.placeholder.vc/blog/2023/10/23/artificial-intelligence-belongs-onchain). We work on projects related to decentralized computing, AI agents coordination protocols and more. 

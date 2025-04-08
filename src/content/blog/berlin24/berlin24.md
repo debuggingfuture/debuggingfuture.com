@@ -10,7 +10,7 @@ thumbnail: berlin24.png
 
 After 15 years I'm finally in Germany again, with a purpose. 
 
-![img](berlin24.jpg)
+![img](./berlin24.jpg)
 
 I was an exchange student in Bonn. Besides drank enough beer to fill a swimming pool and took 30+ budget flights travelling around, I also studied some Microeconomics and Distributed Systems. "Too early" as Vitalik was still playing World of Warcraft and little did I imagine how game theories and consensus algorithms that I learned together with various technologies were going to transform our world.
 

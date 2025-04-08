@@ -24,5 +24,5 @@ Probably it's too cold so she said yes quickly.
 唯願把眼前抱緊
 
 
-![img](snow.jpg)
-![img](more_snow.jpg)
+![img](./snow.jpg)
+![img](./more_snow.jpg)
