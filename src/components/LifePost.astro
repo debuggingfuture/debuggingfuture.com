@@ -1,0 +1,19 @@
+---
+import { getEntry, render } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+const today = new Date();
+
+const { id } = Astro.props;
+
+const post = await getEntry("life", id);
+const { Content } = await render(post);
+---
+
+<div class="text-left">
+    <h3 class="title font-semibold text-xs">{post?.data.title}</h4>
+    <p class="date">
+        <Content />
+        <FormattedDate date={post?.data.date} /> 
+    </p>
+</div>

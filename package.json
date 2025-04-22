@@ -1,12 +1,22 @@
 {
-  "name": "debuggingfuture.com",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:vincentlaucy/debuggingfuture.com.git",
-  "author": "Vincent LCY <lauchunyin@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "hexo": "^5.3.0",
-    "hexo-deployer-git": "^3.0.0"
-  }
+	"name": "debuggingfuture.com",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"check:fix": "biome check . --write --no-errors-on-unmatched"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^4.2.1",
+		"@astrojs/rss": "^4.0.11",
+		"@astrojs/sitemap": "^3.3.0",
+		"@tailwindcss/vite": "^4.0.15",
+		"astro": "^5.5.4",
+		"tailwindcss": "^4.0.15"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
 }
