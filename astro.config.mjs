@@ -15,7 +15,7 @@ export default defineConfig({
 			theme: {
 				extend: {
 					fontFamily: {
-						serif: ['"Noto Serif CJK TC"', 'serif'], // Or 'sans' if you prefer
+						serif: ['Noto Serif TC', 'serif'], // Or 'sans' if you prefer
 					},
 				},
 			},

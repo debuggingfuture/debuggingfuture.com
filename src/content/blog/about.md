@@ -1,6 +1,6 @@
 ---
 title: Vincent Lau @ debuggingfuture
-tags: [self]
+tags: [self, hidden]
 categories: [vincent]
 date: 1988-11-18
 ---

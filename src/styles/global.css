@@ -182,3 +182,29 @@ margin-top: 0em;
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+.animation {
+  animation: bodyshow 0.9s linear;
+}
+
+@keyframes bodyshow {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+
+  33% {
+    top: -40px;
+    opacity: 0.2;
+  }
+
+  66% {
+    top: -20px;
+    opacity: 0.6;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
