@@ -1,22 +1,16 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import LifePost from '../../components/LifePost.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import LifePost from "../../components/LifePost.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedDate from "../../components/FormattedDate.astro";
 
-const posts = (await getCollection('life'))
-.filter(
-	(post) => !post.data?.tags?.includes('hidden')
-)
-.sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
-
-
+const posts = (await getCollection("life"))
+	.filter((post) => !post.data?.tags?.includes("hidden"))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
 <!doctype html>

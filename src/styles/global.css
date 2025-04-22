@@ -15,9 +15,8 @@
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px
+		rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 
 .noto-serif-tc-cjk {
@@ -25,12 +24,10 @@
 	font-optical-sizing: auto;
 	/* font-weight: 600;
 	font-style: normal; */
-  }
-
-
+}
 
 body {
-	font-family: 'Noto Serif TC', 'Times New Roman', serif;
+	font-family: "Noto Serif TC", "Times New Roman", serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -47,7 +44,6 @@ body {
 h1 {
 	font-weight: 700;
 }
-
 
 main {
 	width: 720px;
@@ -134,7 +130,7 @@ blockquote {
 hr {
 	border: none;
 	height: 4em;
-	text-align:center;
+	text-align: center;
 	/* border-top: 1px solid rgb(var(--gray-light)); */
 }
 
@@ -150,10 +146,10 @@ hr:after {
 }
 
 blockquote {
-margin-top: 1rem;
+	margin-top: 1rem;
 }
 blockquote p:last-child {
-margin-top: 0em;
+	margin-top: 0em;
 }
 
 @media (max-width: 720px) {
@@ -184,29 +180,29 @@ margin-top: 0em;
 }
 
 .animation {
-  animation: bodyshow 0.9s linear;
+	animation: bodyshow 0.9s linear;
 }
 
 @keyframes bodyshow {
-  0% {
-    top: -60px;
-    opacity: 0;
-  }
+	0% {
+		top: -60px;
+		opacity: 0;
+	}
 
-  33% {
-    top: -40px;
-    opacity: 0.2;
-  }
+	33% {
+		top: -40px;
+		opacity: 0.2;
+	}
 
-  66% {
-    top: -20px;
-    opacity: 0.6;
-  }
+	66% {
+		top: -20px;
+		opacity: 0.6;
+	}
 
-  100% {
-    top: 0;
-    opacity: 1;
-  }
+	100% {
+		top: 0;
+		opacity: 1;
+	}
 }
 
 li {
