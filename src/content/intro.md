@@ -29,7 +29,3 @@ It\'s promised AI will give us more leisure and unleash our creativity. What if 
 - [In Web3, Community is the CEO](https://x.com/sandeepnailwal/status/1556698309867233280)
 
 
-Subscribe via [RSS/Atom](https://debuggingfuture.com/atom.xml) or substack
-
-<iframe src="https://debuggingfuture.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-

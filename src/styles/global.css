@@ -208,3 +208,7 @@ margin-top: 0em;
     opacity: 1;
   }
 }
+
+li {
+	line-height: 3rem;
+}
