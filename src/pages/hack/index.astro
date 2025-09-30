@@ -6,7 +6,7 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("hack")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
@@ -16,40 +16,21 @@ const posts = (await getCollection("blog")).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
+			.post-card * {
 				text-decoration: none;
 				transition: 0.2s ease;
 			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
+			.post-card:first-child img {
 				width: 100%;
 			}
-			ul li:first-child .title {
+			.post-card:first-child .title {
 				font-size: 2.369rem;
 			}
-			ul li img {
+			.post-card img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
 			}
-			ul li a {
+			.post-card a {
 				display: block;
 			}
 			.title {
@@ -61,49 +42,36 @@ const posts = (await getCollection("blog")).sort(
 				margin: 0;
 				color: rgb(var(--gray));
 			}
-			ul li a:hover h4,
-			ul li a:hover .date {
+			.post-card a:hover h4,
+			.post-card a:hover .date {
 				color: rgb(var(--accent));
 			}
-			ul a:hover img {
+			.post-card a:hover img {
 				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main class="max-w-4xl mx-auto">
 			<section>
-				<ul>
+				<div class="flex flex-wrap gap-8 lg:gap-6">
 					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
+						posts.map((post, index) => (
+							<div class={`post-card flex-shrink-0 w-full ${index === 0 ? ' mb-4 text-center' : ''}`}>
+								<a href={`/hack/${post.id}/`}>
+									{post.data.thumbnail && (
+										<img width={720} height={360} src={`/src/content/hack/${post.id}/${post.data.thumbnail}?url`} alt="" />
+									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										{/* <FormattedDate date={post.data.date} /> */}
 									</p>
 								</a>
-							</li>
+							</div>
 						))
 					}
-				</ul>
+				</div>
 			</section>
 		</main>
 		<Footer />

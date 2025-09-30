@@ -9,12 +9,16 @@
 		"check:fix": "biome check . --write --no-errors-on-unmatched"
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.9.4",
 		"@astrojs/mdx": "^4.2.1",
 		"@astrojs/rss": "^4.0.11",
 		"@astrojs/sitemap": "^3.3.0",
 		"@tailwindcss/vite": "^4.0.15",
 		"astro": "^5.5.4",
-		"tailwindcss": "^4.0.15"
+		"rehype-external-links": "^3.0.0",
+		"remark-breaks": "^4.0.0",
+		"tailwindcss": "^4.0.15",
+		"typescript": "^5.9.2"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4"

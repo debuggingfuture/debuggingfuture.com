@@ -1,17 +1,19 @@
 ---
-title: Hack - SEELE @ ETHdenver
+title: SEELE @ ETHDenver 25
 tags: [eth, hack]
 categories: [work, project]
-date: 2026-01-01
+date: 2026-03-02
+thumbnail: seele.jpeg
 ---
 
 
 [Project on Devfolio](https://devfolio.co/projects/seele-3477)
 
-Our team hacked at ETHDenver and won Top 3 projects in DAO track!
 
 
+Continued to hack on CMS idea, at ETHDenver I built an Autonomous website owned by agents, governed by community
 
+Awarded ETHDenver Top 3 projects in DAO track
 
 💡WebApps are often the weakest link in security, misinformation and decentralization. With AI agents proliferating, what if we let AI take over and make websites autonomous?
 

@@ -1,0 +1,22 @@
+---
+export interface Props {
+	width?: string;
+	height?: string;
+	substackUrl?: string;
+}
+
+const {
+	width = "480",
+	height = "320",
+	substackUrl = "https://debuggingfuture.substack.com/embed"
+} = Astro.props;
+---
+
+<iframe
+	src={substackUrl}
+	width={width}
+	height={height}
+	style="border:1px solid #EEE; background:white;"
+	frameborder="0"
+	scrolling="no">
+</iframe>

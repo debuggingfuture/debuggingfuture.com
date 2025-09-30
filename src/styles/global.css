@@ -27,7 +27,7 @@
 }
 
 body {
-	font-family: "Noto Serif TC", "Times New Roman", serif;
+	font-family: "BAUHAUS", "Noto Serif TC", "Times New Roman", serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -86,10 +86,24 @@ a {
 a:hover {
 	color: var(--accent);
 }
+.content a {
+	color: var(--accent);
+	font-weight: 600;
+	text-decoration: none;
+	background: linear-gradient(180deg, transparent 50%, #ffde17 50%);
+	padding: 2px 1px;
+}
+.content a:hover {
+	color: var(--accent);
+	font-weight: 700;
+	text-decoration: none;
+	background: linear-gradient(180deg, transparent 50%, #ffde17 50%);
+	padding: 2px 1px;
+}
 p {
 	margin-bottom: 1em;
 }
-.prose p {
+.content p {
 	margin-bottom: 2em;
 }
 textarea {

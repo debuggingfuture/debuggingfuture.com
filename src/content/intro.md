@@ -6,9 +6,9 @@ date: 2024-01-01
 
 I believe in open source, [local-first](https://localfirstweb.dev/), fair, decentralized technologies and organizations, trying to build some.
 
-Currently I focus on my Dev Studio [Fractal Box](https://fractal.box/), where we strive to create infrastructure & services to put [AI on chain](https://www.placeholder.vc/blog/2023/10/23/artificial-intelligence-belongs-onchain). We work on projects related to decentralized computing, AI agents coordination protocols and more. 
+Currently I focus on my Dev Studio [FractalBox](https://fractal.box/) which provide Tech Lead as a service to various startups and venture studios. 
 
-I like to keep up my learning by experimenting with different ideas on my own or at hackathons, [check it out](/categories/work/). I also organize developer communities & build on public goods / civic hacking projects since 2011.
+I like to keep up my learning by [hacking](/categories/hacks/) with different ideas on my own or at hackathons.
 
 It\'s our mission to make Technologies and Education empowering individuals so the world stays free, open, permissive, innovative and equal.
 

@@ -11,9 +11,11 @@ const { Content } = await render(post);
 ---
 
 <div class="text-left">
-    <h3 class="title font-semibold text-xs">{post?.data.title}</h4>
-    <p class="date">
+    <h3 class="title font-semibold text-xs">{post?.data.title}</h3>
+    <div class="content">
         <Content />
+    </div>
+    <p class="date">
         <FormattedDate date={post?.data.date} /> 
     </p>
 </div>

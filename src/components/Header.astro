@@ -9,8 +9,9 @@ import HeaderLink from "./HeaderLink.astro";
 		<div class="internal-links">
 			<HeaderLink href="/">@debuggingfuture</HeaderLink>
 			<!-- <HeaderLink href="/work">Work 作</HeaderLink> -->
-			<HeaderLink href="/blog">Thoughts 想</HeaderLink>
-			<HeaderLink href="/life">Life 活</HeaderLink>
+			<HeaderLink href="/hack" class="nav-hack">Hacks 作</HeaderLink>
+			<HeaderLink href="/blog" class="nav-blog">Thoughts 思</HeaderLink>
+			<HeaderLink href="/life" class="nav-life">Life 活</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -53,5 +54,17 @@ import HeaderLink from "./HeaderLink.astro";
 		.social-links {
 			display: none;
 		}
+	}
+	nav a.nav-hack {
+		border-bottom: 8px solid #be1e2d;
+	}
+	nav a.nav-blog {
+		border-bottom: 8px solid #ffde17;
+	}
+	nav a.nav-life {
+		border-bottom: 8px solid #21409a;
+	}
+	.internal-links a:first-child {
+		font-weight: bold;
 	}
 </style>

@@ -16,6 +16,29 @@ const posts = (await getCollection("blog"))
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			/* Import Bauhaus font */
+			@import url('https://fonts.cdnfonts.com/css/bauhaus-2');
+			
+			/* Apply Bauhaus font to title and navbar with maximum specificity */
+			html body.font-bauhaus-headers header h2,
+			html body.font-bauhaus-headers header h2 a,
+			html body.font-bauhaus-headers header .internal-links a,
+			html body.font-bauhaus-headers .internal-links a {
+				font-family: "BAUHAUS", "Bauhaus", Arial, sans-serif !important;
+				font-optical-sizing: auto !important;
+				font-weight: 400 !important;
+			}
+			
+			/* Backup: Force override any inherited Noto Serif */
+			.font-bauhaus-headers * {
+				font-family: inherit;
+			}
+			
+			.font-bauhaus-headers header,
+			.font-bauhaus-headers header * {
+				font-family: "BAUHAUS", "Bauhaus", Arial, sans-serif !important;
+			}
+			
 			main {
 				width: 960px;
 			}
@@ -85,16 +108,19 @@ const posts = (await getCollection("blog"))
 			}
 		</style>
 	</head>
-	<body>
+	<body class="font-bauhaus-headers">
 		<Header />
 		<main>
-			<section>
+			<sectio class="content">
 				<ul class="flex flex-col">
 					{
 						posts.map((post) => (
 							<li class="flex gap-4 p-4">
 								<a href={`/blog/${post.id}/`}>
-									<h3 class="title font-light">{post.data.title}</h4>
+									{post.data.thumbnail && (
+										<img width={720} height={360} src={`/src/content/blog/${post.id}/${post.data.thumbnail}?url`} alt="" />
+									)}
+									<h3 class="title font-light">{post.data.title}</h3>
 									<p class="date">
 										{/* <FormattedDate date={post.data.date} /> */}
 									</p>
