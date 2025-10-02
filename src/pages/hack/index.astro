@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
@@ -61,7 +62,7 @@ const posts = (await getCollection("hack")).sort(
 							<div class={`post-card flex-shrink-0 w-full ${index === 0 ? ' mb-4 text-center' : ''}`}>
 								<a href={`/hack/${post.id}/`}>
 									{post.data.thumbnail && (
-										<img width={720} height={360} src={`/src/content/hack/${post.id}/${post.data.thumbnail}?url`} alt="" />
+										<Image width={720} height={360} src={`/src/content/hack/${post.id}/${post.data.thumbnail}`} alt="" />
 									)}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
