@@ -10,6 +10,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 const posts = (await getCollection("hack")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+
+const images = import.meta.glob('../../content/hack/**/*.{jpeg,jpg,png}', { eager: true, import: 'default' });
 ---
 
 <!doctype html>
@@ -58,19 +60,23 @@ const posts = (await getCollection("hack")).sort(
 			<section>
 				<div class="flex flex-wrap gap-8 lg:gap-6">
 					{
-						posts.map((post, index) => (
-							<div class={`post-card flex-shrink-0 w-full ${index === 0 ? ' mb-4 text-center' : ''}`}>
-								<a href={`/hack/${post.id}/`}>
-									{post.data.thumbnail && (
-										<Image width={720} height={360} src={`/src/content/hack/${post.id}/${post.data.thumbnail}`} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										{/* <FormattedDate date={post.data.date} /> */}
-									</p>
-								</a>
-							</div>
-						))
+						posts.map((post, index) => {
+							const thumbnailPath = post.data.thumbnail ? `../../content/hack/${post.id}/${post.data.thumbnail}` : null;
+							const thumbnailImage = thumbnailPath ? images[thumbnailPath] : null;
+							return (
+								<div class={`post-card flex-shrink-0 w-full ${index === 0 ? ' mb-4 text-center' : ''}`}>
+									<a href={`/hack/${post.id}/`}>
+										{thumbnailImage && (
+											<Image width={720} height={360} src={thumbnailImage} alt="" />
+										)}
+										<h4 class="title">{post.data.title}</h4>
+										<p class="date">
+											{/* <FormattedDate date={post.data.date} /> */}
+										</p>
+									</a>
+								</div>
+							);
+						})
 					}
 				</div>
 			</section>
