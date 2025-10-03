@@ -1,5 +1,5 @@
 ---
-title:  今
+title: 今
 tags: [jp, self]
 categories: [thoughts]
 date: 2025-07-08
@@ -299,8 +299,8 @@ Fear can hold you prisoner. Hope can set you free.
 更有這一瞬、即將的語境。
 朋友告別說「今度再見」，就更接近see you soon的意思。
 
-榮格謂看不透自己的陰影，就只能認命; [1]
-尼采說殺不死我的，會使我更強。[2]
+榮格謂看不透自己的陰影，就只能認命; [2]
+尼采說殺不死我的，會使我更強。[3]
 
 ![img](./fuji3.jpg)
 
@@ -329,10 +329,10 @@ Fear can hold you prisoner. Hope can set you free.
 ---
 
 
-[1] 身は花とともに落つれども、心は香とともに飛ぶ。---性霊集
+[1] 身は花とともに落つれども、心は香とともに飛ぶ。--- 空海『性霊集』
 
-[2] "Until you make the unconscious conscious, it will direct your life and you will call it fate." [(origin is a bit different)](https://secondat.blogspot.com/2011/05/of-those-who-do-not-toil-in-blindness.html)
+[2] "Until you make the unconscious conscious, it will direct your life and you will call it fate." --- Carl Jung [(origin is a bit different)](https://secondat.blogspot.com/2011/05/of-those-who-do-not-toil-in-blindness.html)
 
-[3] Was mich nicht umbringt, macht mich stärker
+[3] Was mich nicht umbringt, macht mich stärker --- "Maxims and Arrows", Nietzsche
   
 ---
