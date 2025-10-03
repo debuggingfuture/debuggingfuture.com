@@ -1,69 +1,49 @@
-
+---
+title:  今
+tags: [jp, self]
+categories: [thoughts]
+date: 2025-07-08
 
 ---
-
+![img](./fuji2.jpg)
 
 ただいま。
   
-
 我回來了。
-
 回到佗寂的國度、
-
 拾回點寫作的感覺;
 
 
 逃避房貸和種種紛擾憾事，
-
 逆向思維在異地尋覓居所。
 
 
 也又再為自己按F5 重新整理，
-
 平平實實，沒打算享受生活，這是生活。
 
-  
-
 抓緊些甚麼過活，
-
 禮失求諸野，此心安處是吾鄉。
 
 ---
 
 安頓於福岡前，
-
 旅程先訪表裏靈峰。
 
-
 經歷代文藝創作，富士代表日本，
-
 是種集體想像。
 
-  
-
 太宰治的《富嶽百景》，
-
 開首便說富士山其實沒那麼聳峭，広重和北斎讓大家想多了。
 
 家中我掛了幅《凱風快晴》，不諳美術卻對浮世繪情有獨鍾。
-
 數年前，偶爾讀到的那段引人入勝的美術史：
-
 各種破格的人物、交流演化的故事比畫作本身對我來說更曉有趣味。
-
 梵高沒到過日本，後期卻大受浮世繪影響;
-
-臨摹過歌川廣重，甚至有[星夜是受神奈川衝浪啟發的說法](https://www.bbc.com/ukchina/trad/vert-cul-43537936)
-
-  
-
+臨摹過歌川廣重，甚至有[《星夜》是受神奈川衝浪啟發的說法](https://www.bbc.com/ukchina/trad/vert-cul-43537936)。
 葛飾北斎開創漫畫先河，
+畫《富嶽三十六景》，打卡的MEME比我們都早了200年。
 
-畫富嶽三十六景，打卡的MEME比我們都早了200年。
-
-  
-[./fuji1.jpg]
-
+![img](./fuji1.jpg)
   
 
 日本地理知識有限，也總因為信長聽過今川義元和駿河國。
@@ -489,8 +469,6 @@ Fear can hold you prisoner. Hope can set you free.
 [2] "Until you make the unconscious conscious, it will direct your life and you will call it fate." [Origin is a bit different](https://secondat.blogspot.com/2011/05/of-those-who-do-not-toil-in-blindness.html)
 
 [3] Was mich nicht umbringt, macht mich stärker
-
-  
   
 ---
 
