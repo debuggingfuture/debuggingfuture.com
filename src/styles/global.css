@@ -100,6 +100,12 @@ a:hover {
 	background: linear-gradient(180deg, transparent 50%, #ffde17 50%);
 	padding: 2px 1px;
 }
+
+.content img {
+	max-height: 500px;
+	width: auto; /* Maintain aspect ratio */
+}
+
 p {
 	margin-bottom: 1em;
 }
@@ -139,7 +145,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0px;
-	font-size: 1.333em;
+	font-size: 1em;
 }
 hr {
 	border: none;
