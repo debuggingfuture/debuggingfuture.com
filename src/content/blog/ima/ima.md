@@ -299,9 +299,6 @@ Fear can hold you prisoner. Hope can set you free.
 更有這一瞬、即將的語境。
 朋友告別說「今度再見」，就更接近see you soon的意思。
 
-榮格謂看不透自己的陰影，就只能認命; [2]
-尼采說殺不死我的，會使我更強。[3]
-
 ![img](./fuji3.jpg)
 
 富士山下，櫻花有六百種。
@@ -309,6 +306,9 @@ Fear can hold you prisoner. Hope can set you free.
 找到能相信的道路，放下虛妄，
 轉念為善，立地成佛，
 那今是比昨非重要。
+
+榮格謂看不透自己的陰影，就只能認命; [2]
+尼采說殺不死我的，會使我更強。[3]
 
 「厭離穢土，欣求淨土」要種主體性，
 或曰[Agency](https://giansegato.com/essays/agency-is-eating-the-world)，原來都由心出發。
