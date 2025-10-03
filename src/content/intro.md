@@ -8,7 +8,7 @@ I believe in open source, [local-first](https://localfirstweb.dev/), fair, decen
 
 Currently I focus on my Dev Studio [FractalBox](https://fractal.box/) which provide Tech Lead as a service to various startups and venture studios. 
 
-I like to keep up my learning by [hacking](/categories/hacks/) with different ideas on my own or at hackathons.
+I like to keep up with my learning by [hacking](/hack/) with different ideas on my own or at hackathons.
 
 It\'s our mission to make Technologies and Education empowering individuals so the world stays free, open, permissive, innovative and equal.
 
