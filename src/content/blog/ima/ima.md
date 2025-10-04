@@ -276,7 +276,7 @@ At least he tried.
 
 人的悔恨不甘，
 大抵源於對平行時空的想像力。
-黃仁勲說你不能躲避你的過去；
+[黃仁勲說你不能躲避你的過去](https://www.gsb.stanford.edu/insights/jensen-huang-how-use-first-principles-thinking-drive-decisions)；
 但正因如此，
 要掌握的是future past。
 
