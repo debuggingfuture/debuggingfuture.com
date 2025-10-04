@@ -145,7 +145,7 @@ Memecoin 有價有市，帶動每點神經。
 越要表現自我，越迷失自我，
 以為擁有，其實沒有。
 
-作為曾經的[科技觀主義者Techno optimist](https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html)，
+作為曾經的[科技樂觀主義者Techno optimist](https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html)，
 活在今天快、淺、利益為先的種種封閉平台，各種建構出的真實，
 總有不甘，或更多是恐懼；
 去中心化或隱私技術成熟，應用卻沒必然性。
