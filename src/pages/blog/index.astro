@@ -97,7 +97,7 @@ const posts = (await getCollection("blog"))
 				}
 				ul li {
 					width: 100%;
-					text-align: center;
+					text-align: left;
 				}
 				ul li:first-child {
 					margin-bottom: 0;
@@ -111,13 +111,13 @@ const posts = (await getCollection("blog"))
 	<body class="font-bauhaus-headers">
 		<Header />
 		<main>
-			<sectio class="">
+			<section class="">
 				<ul class="flex flex-col">
 					{
 						posts.map((post) => (
-							<li class="flex gap-4 p-4">
+							<li class="flex gap-4 p-4 w-3/5 min-w-[60%]">
 								<a href={`/blog/${post.id}/`}>
-									<h3 class="title font-light">{post.data.title}</h3>
+									<h3 class="title font-light text-sm sm:text-base">{post.data.title}</h3>
 									<p class="date">
 										{/* <FormattedDate date={post.data.date} /> */}
 									</p>
