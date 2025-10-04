@@ -6,8 +6,11 @@ import HeaderLink from "./HeaderLink.astro";
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">@debuggingfuture</HeaderLink>
+		<div class="internal-links text-xs sm:text-base">
+			<HeaderLink href="/">
+				<span class="sm:hidden">@</span>
+				<span class="hidden sm:inline">@debuggingfuture</span>
+			</HeaderLink>
 			<!-- <HeaderLink href="/work">Work 作</HeaderLink> -->
 			<HeaderLink href="/hack" class="nav-hack">Hacks 作</HeaderLink>
 			<HeaderLink href="/blog" class="nav-blog">Thoughts 思</HeaderLink>
