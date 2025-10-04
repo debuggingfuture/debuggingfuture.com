@@ -155,4 +155,4 @@ Hyperloop、把地球變成一小時生活圈的Starship和Tesla一樣，
 依稀的港式天空下、變化中的世界中要選擇甚麼，​​願多個非主流的角度。  
 ​​在借來的地方，借來的時間聚散匆匆，​​也許我們早應習慣，​​或旅或居，都是種一期一會，​​好珍惜那淡淡相逢、輕輕相擁。  
   
-{% youtube er6SPl-Jcik %}  
+https://www.youtube.com/watch?v=er6SPl-Jcik  

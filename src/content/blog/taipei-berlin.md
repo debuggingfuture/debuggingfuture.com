@@ -72,7 +72,7 @@ Big Brother 無處不在下，簡單的「移民」本質上沒有解決問題�
 
 > And there are even a few who say that it is true that communism is an evil system, but it permits us to make economic progress. Lass\' sie nach Berlin kommen. Let them come to Berlin.
 
-{% youtube y1NzrR4GYqs %}
+https://www.youtube.com/watch?v=y1NzrR4GYqs
 
 無法預視未來，而在這城市滙聚的力量能創造甚麼，
 是歷史對這一代人的考驗。

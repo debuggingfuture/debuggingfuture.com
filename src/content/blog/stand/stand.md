@@ -41,7 +41,7 @@ medium: https://medium.com/@vincent_lcy/%E7%AB%8B-e110ab209635
 
 六四對香港，從不只是歷史記憶。
 
-## {% youtube t2ecDWEKufs %}
+## https://www.youtube.com/watch?v=t2ecDWEKufs
 
 香港所謂「地少人多」，而其實「高地價政策」由[義律早就開始](https://www.landreg.gov.hk/tc/about/1855.htm)。
 
