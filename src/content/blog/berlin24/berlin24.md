@@ -60,6 +60,6 @@ Probably I've watched too many eposides of ["The Dark"](https://en.wikipedia.org
 
 Allow me to have indulged in nostalgia, picking up memories from bookstores to supermarket, from the Reichtag to the Brandenburg Gate. I got a chance to have a dialogue with my younger self, pondered what I wished and feared. Different ambitions, still the curious and somehow idealistic person, perhaps. "Vorbei ist Vorbei", I can't change the past, but I'm gateful this trip helped me to reflect and reimagine what are paths I could be taking as I open a new chapter of my career and life.
 
-There is a lot to learn ahead, and hope is what it takes for my redepmption. 
+There is a lot to learn ahead, and hope those are what it takes for my redemption. 
 I'm genuinely happy to be still alive, when my good old classmate and travel companion could ony live in my memories.
 
