@@ -26,6 +26,7 @@ export default defineConfig({
 		sitemap(),
 	],
 	markdown: {
+		smartypants: false,
 		remarkPlugins: [remarkBreaks],
 		rehypePlugins: [
 			[
