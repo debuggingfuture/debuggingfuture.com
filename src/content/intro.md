@@ -19,11 +19,31 @@ Web3 is about ownership. DAO is about collaboration. Blockchain is not only abou
 It\'s promised AI will give us more leisure and unleash our creativity. What if we are able to spend more time learning, creating and caring, when it also fulfills our necessities --- probably a more sustainable earth and civilization. For that I'm learning 3d printing, hydroponics and looking forward to more projects like [FarmBot](https://farm.bot/). I wish people can start their company taking a fair share.
 
 
+### Community
+
+I learn a lot by immersing mmyself among great developers. Over the years I have been organizing and speaking at communities.
+
+Some of my talks and sharings
+2025 - Sharing on Geist, FIL Microgrant recipient, Filecoin Code n' Corgi, Denver
+2024 - FIL Builder Showcase, FIL Dev Summit 2024, Bangkok
+2024 - How Web3 can help crowdsourcing translation for OSS, FOSSAsia 2024, Hanoi
+2024 - Hacking at Web3 Hackathons - Web3Dev.Community Meetup, Singapore 
+2023 - Account Abstraction - Web3Dev.Community Meetup, Singapore 
+2018 - Sharing on Mobx, Show me the Code Meetup, Taiwan
+2016 - Visualization WebApp with AWS Lambda, JSDC, Taiwan
+2016 - Visualizing Facebook Data with fbreactions.io, Lighting talk, G0V Summit 2016, Taiwan
+2013 - Introduction to ElasticSearch, HKOSC (Hong Kong Open Source Conference) 
+
+Developers communities with 40+ meetups I organized
+- Web3Dev.Community - Singapore, Hong Kong
+- Facebook Developer Circle, Hong Kong
+- Show me the code - Hong Kong, Taiwan
+- Code for Hong Kong - Hong Kong
+
 
 ### Mottos, iterating:
 - [The Most Important Scarce Resource is Legitimacy](https://vitalik.eth.limo/general/2021/03/23/legitimacy.html)
 - Civilization is in a race between education and catastrophe.
-- Every Web3 discussion starts technical, ends philosophical.
 - [Protocols, Not Platforms](https://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech)
 - Individuals and Interactions Over Processes and Tools. - [Agile Manifesto](https://agilemanifesto.org/)
 - [In Web3, Community is the CEO](https://x.com/sandeepnailwal/status/1556698309867233280)
