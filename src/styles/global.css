@@ -17,6 +17,28 @@
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px
 		rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+
+	/* Design tokens — site-wide */
+	--space-1: 0.5rem;
+	--space-2: 1rem;
+	--space-3: 1.5rem;
+	--space-4: 2.5rem;
+	--space-5: 4rem;
+	--space-6: 6rem;
+
+	--card-radius: 16px;
+	--card-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+	--card-border: 1px solid rgba(0, 0, 0, 0.08);
+	--card-bg: #fff;
+	--card-fg: #000;
+	--card-pad-y: var(--space-3);
+	--card-pad-x: var(--space-4);
+	--card-pad-y-tight: 1.1rem;
+	--card-pad-x-tight: 1.4rem;
+
+	--text-leading: 1.7;
+	--heading-leading: 1.3;
+	--content-prose-max: 68ch;
 }
 
 .noto-serif-tc-cjk {
@@ -57,7 +79,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
+	margin: 0 0 1.5rem 0;
 	color: rgb(var(--black));
 	line-height: 1.2;
 }

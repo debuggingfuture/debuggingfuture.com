@@ -1,0 +1,192 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import SkyV2Observatory from "../components/sky/SkyV2Observatory.astro";
+import TimeScrubber from "../components/sky/TimeScrubber.astro";
+import { SITE_GEO } from "../astronomy/geo";
+import { computeSkyState } from "../astronomy/state";
+
+interface Props {
+	title: string;
+	description?: string;
+	bare?: boolean;
+}
+
+const { title, description, bare = false } = Astro.props;
+
+function fmtCoord(value: number, posLabel: string, negLabel: string): string {
+	const abs = Math.abs(value).toFixed(2);
+	return `${abs}°${value >= 0 ? posLabel : negLabel}`;
+}
+
+const geo = Astro.locals.geo ?? { ...SITE_GEO, source: "fallback" as const };
+const latStr = fmtCoord(geo.lat, "N", "S");
+const lonStr = fmtCoord(geo.lon, "E", "W");
+const placeName = geo.name ?? SITE_GEO.name;
+
+const baselineSky = computeSkyState(new Date(), geo);
+const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
+	.map(([k, v]) => `  ${k}: ${v};`)
+	.join("\n")}\n}`;
+---
+
+<!doctype html>
+<html lang="en" class="site">
+	<head>
+		<BaseHead title={title} description={description ?? ""} />
+		<style is:inline set:html={inlineVarsBlock}></style>
+		<style is:global>
+			html.site body {
+				color: var(--content-fg, #0f1219);
+				background: transparent;
+			}
+			html.site header {
+				width: fit-content;
+				max-width: calc(100% - 2rem);
+				margin: 2.25rem auto 0;
+				padding: 0.25rem 0.7rem;
+				background: var(--content-bg, rgba(255, 255, 255, 0.92));
+				color: var(--content-fg, #0f1219);
+				border: 1px solid var(--content-border, rgba(0, 0, 0, 0.08));
+				border-radius: 999px;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			}
+			html.site header nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.4rem;
+				flex-wrap: nowrap;
+			}
+			html.site header nav .internal-links {
+				display: flex;
+				align-items: center;
+				gap: 0.4rem;
+				flex-wrap: nowrap;
+			}
+			html.site header nav h2 {
+				display: inline-flex;
+				align-items: center;
+				margin: 0;
+				padding: 0 3rem 0 0.4rem;
+				font-size: 1rem;
+				font-weight: 600;
+				line-height: 1;
+				opacity: 0.85;
+			}
+			html.site header nav h2 a { padding: 0; }
+			html.site header nav a {
+				display: inline-flex;
+				align-items: center;
+				padding: 0.3rem 0.55rem;
+				border-bottom: none;
+				box-shadow: none;
+				border-radius: 999px;
+				color: inherit;
+				font-size: 1.1rem;
+				transition: background 200ms ease;
+			}
+			html.site header nav a:hover { background: rgba(0, 0, 0, 0.05); }
+			html.site header nav a.active {
+				padding: 0.3rem 0.95rem;
+				margin: 0 -0.4rem;
+				background: var(--content-fg, #0f1219);
+				color: var(--content-bg-fg, #fff);
+				font-weight: 500;
+				text-decoration: none;
+			}
+		</style>
+		<style is:global>
+			html.site main.site-main {
+				width: min(980px, calc(100% - 2rem));
+				margin: 5rem auto 10rem;
+				padding: 0;
+				animation: site-enter 1.6s linear;
+			}
+			@keyframes site-enter {
+				from { opacity: 0; }
+				to   { opacity: 1; }
+			}
+			@media (prefers-reduced-motion: reduce) {
+				html.site main.site-main { animation: none; }
+			}
+			html.site article.content-card {
+				padding: var(--space-3) calc(var(--space-4) + var(--space-2));
+				border-radius: var(--card-radius);
+				background: var(--card-bg);
+				color: var(--card-fg);
+				border: var(--card-border);
+				box-shadow: var(--card-shadow);
+			}
+			html.site article.content-card p {
+				margin: 0 0 var(--space-2);
+				line-height: var(--text-leading);
+			}
+			html.site article.content-card h2,
+			html.site article.content-card h3,
+			html.site article.content-card h4 {
+				margin-top: var(--space-4);
+			}
+			/* Prose width cap — keeps lines readable inside wider cards */
+			html.site article.content-card p,
+			html.site article.content-card h2,
+			html.site article.content-card h3,
+			html.site article.content-card h4,
+			html.site article.content-card ul,
+			html.site article.content-card ol,
+			html.site article.content-card blockquote {
+				max-width: var(--content-prose-max);
+				margin-left: auto;
+				margin-right: auto;
+			}
+			html.site article.content-card a,
+			html.site main.site-main a {
+				color: inherit;
+				font-weight: 600;
+				text-decoration: none;
+				background: linear-gradient(180deg, transparent 50%, #ffde17 50%);
+				padding: 0 1px;
+			}
+			@media (max-width: 720px) {
+				html.site article.content-card {
+					padding: var(--space-3) var(--space-2);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<script is:inline set:html={`window.__skyGeo = ${JSON.stringify(geo)};`}></script>
+		<SkyV2Observatory />
+		<Header />
+		<main class="site-main">
+			{bare ? (
+				<slot />
+			) : (
+				<article class="content-card">
+					<slot />
+				</article>
+			)}
+		</main>
+		<TimeScrubber placeName={placeName} latStr={latStr} lonStr={lonStr} />
+		<script>
+			(() => {
+				const dateEl = document.getElementById("geo-affix-date");
+				const fmt = new Intl.DateTimeFormat(undefined, {
+					weekday: "short",
+					year: "numeric",
+					month: "short",
+					day: "numeric",
+				});
+				document.addEventListener("skystate", (e) => {
+					const t = (e as CustomEvent).detail.time as Date;
+					if (dateEl) {
+						dateEl.textContent = fmt.format(t);
+						dateEl.setAttribute("datetime", t.toISOString());
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>

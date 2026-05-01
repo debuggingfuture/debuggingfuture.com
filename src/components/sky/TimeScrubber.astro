@@ -1,0 +1,226 @@
+---
+// Drives all variants. Dispatches `skystate` on input AND on a slow auto-advance
+// (sidereal-ish drift), so the sky keeps moving while the reader is reading.
+// User interaction pauses the drift for a few seconds, then it resumes.
+interface Props {
+	placeName?: string;
+	latStr?: string;
+	lonStr?: string;
+}
+const { placeName, latStr, lonStr } = Astro.props;
+const showGeo = !!(placeName || (latStr && lonStr));
+---
+
+<aside class="time-scrubber" aria-label="Sky controls">
+	<div class="geo">
+		{placeName && <span class="place">{placeName}</span>}
+		{placeName && latStr && <span class="sep">·</span>}
+		{latStr && lonStr && <span class="coord">{latStr}, {lonStr}</span>}
+		{(placeName || latStr) && <span class="sep">·</span>}
+		<time class="affix-date" id="geo-affix-date" datetime="">—</time>
+	</div>
+	<div class="time-row">
+		<span class="time-readout" id="sky-time-readout">--:--</span>
+		<input type="range" id="sky-time" min="0" max="1439" step="1" aria-label="Time" />
+		<button type="button" id="sky-now" class="now-btn" title="Snap back to live time">Now</button>
+	</div>
+</aside>
+
+<style>
+	.time-scrubber {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		align-items: stretch;
+		width: min(320px, calc(100% - 2rem));
+		margin: 1.5rem auto 1.5rem;
+		padding: 0.55rem 0.95rem;
+		border-radius: 18px;
+		background: rgba(0, 0, 0, 0.4);
+		color: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		font-size: 0.78rem;
+		font-variant-numeric: tabular-nums;
+	}
+	.time-scrubber .geo,
+	.time-scrubber .affix-date {
+		display: flex;
+		gap: 0.4rem;
+		align-items: baseline;
+		font-size: 0.7rem;
+		opacity: 0.75;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.time-scrubber .geo .place { font-weight: 600; opacity: 0.95; }
+	.time-scrubber .geo .sep { opacity: 0.4; }
+	.time-scrubber .time-row {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	@media (min-width: 720px) {
+		.time-scrubber {
+			position: fixed;
+			right: 1.25rem;
+			bottom: 1.25rem;
+			margin: 0;
+			z-index: 50;
+		}
+	}
+	.time-scrubber .time-readout {
+		font-variant-numeric: tabular-nums;
+		opacity: 0.85;
+		min-width: 3.2em;
+		text-align: center;
+	}
+	.time-scrubber input[type="range"] {
+		flex: 1;
+		font: inherit;
+		color: inherit;
+		background: transparent;
+		border: none;
+		padding: 0;
+		-webkit-appearance: none;
+		height: 22px;
+	}
+	.time-scrubber input[type="range"]::-webkit-slider-runnable-track {
+		height: 2px;
+		background: rgba(255, 255, 255, 0.35);
+		border-radius: 999px;
+	}
+	.time-scrubber input[type="range"]::-moz-range-track {
+		height: 2px;
+		background: rgba(255, 255, 255, 0.35);
+		border-radius: 999px;
+	}
+	.time-scrubber input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #fff;
+		border: none;
+		margin-top: -4px;
+		cursor: ew-resize;
+	}
+	.time-scrubber input[type="range"]::-moz-range-thumb {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #fff;
+		border: none;
+		cursor: ew-resize;
+	}
+	.time-scrubber .now-btn {
+		padding: 0.2rem 0.6rem;
+		border-radius: 999px;
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-size: 0.72rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+	.time-scrubber .now-btn:hover { background: rgba(255, 255, 255, 0.1); }
+</style>
+
+<script>
+	import { computeSkyState } from "../../astronomy/state";
+	import { SITE_GEO } from "../../astronomy/geo";
+
+	// Geo is injected by PreviewLayout from CF Workers (cf.latitude / longitude /
+	// timezone, rounded to 1°). Falls back to SITE_GEO when absent (local dev,
+	// build-time prerender, missing CF headers).
+	const geo =
+		(window as unknown as { __skyGeo?: typeof SITE_GEO }).__skyGeo ?? SITE_GEO;
+
+	const timeInput = document.getElementById("sky-time") as HTMLInputElement;
+	const timeReadout = document.getElementById("sky-time-readout") as HTMLElement;
+	const nowBtn = document.getElementById("sky-now") as HTMLButtonElement;
+
+	// Speed multiplier when auto-advancing — 60× wall-clock so stars drift
+	// noticeably over a minute of reading without becoming dizzying.
+	const SPEED = 60;
+	// Hold off auto-advance for this long after the user touches the controls.
+	const PAUSE_AFTER_USER_MS = 5000;
+
+	let baseTime = new Date();
+	let userActiveUntil = 0;
+	let lastTickWallMs = performance.now();
+	let liveMode = true; // when true, baseTime tracks Date.now() directly
+
+	function pad(n: number): string {
+		return String(n).padStart(2, "0");
+	}
+
+	function syncControlsFromBase() {
+		timeInput.value = String(baseTime.getHours() * 60 + baseTime.getMinutes());
+		timeReadout.textContent = `${pad(baseTime.getHours())}:${pad(baseTime.getMinutes())}`;
+	}
+
+	function dispatch() {
+		const state = computeSkyState(baseTime, geo);
+		document.dispatchEvent(new CustomEvent("skystate", { detail: state }));
+	}
+
+	function readBaseFromInputs() {
+		const minutes = +timeInput.value;
+		const next = new Date(baseTime);
+		next.setHours(Math.floor(minutes / 60), minutes % 60, 0, 0);
+		baseTime = next;
+		timeReadout.textContent = `${pad(Math.floor(minutes / 60))}:${pad(minutes % 60)}`;
+	}
+
+	function setToNow() {
+		baseTime = new Date();
+		liveMode = true;
+		userActiveUntil = 0;
+		syncControlsFromBase();
+		dispatch();
+	}
+
+	function onUserInput() {
+		liveMode = false;
+		userActiveUntil = performance.now() + PAUSE_AFTER_USER_MS;
+		readBaseFromInputs();
+		dispatch();
+	}
+
+	timeInput.addEventListener("input", onUserInput);
+	nowBtn.addEventListener("click", setToNow);
+
+	// Auto-advance loop: when user is idle, advance baseTime by dt × SPEED.
+	// In live mode (after Now press), track the wall clock directly.
+	const reduceMotion =
+		typeof window.matchMedia === "function" &&
+		window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+	function tick() {
+		const now = performance.now();
+		const dtMs = now - lastTickWallMs;
+		lastTickWallMs = now;
+
+		const userIsActive = now < userActiveUntil;
+		if (!userIsActive && document.visibilityState === "visible" && !reduceMotion) {
+			if (liveMode) {
+				baseTime = new Date();
+			} else {
+				baseTime = new Date(baseTime.getTime() + dtMs * SPEED);
+			}
+			syncControlsFromBase();
+			dispatch();
+		}
+		// ~4 updates / sec is plenty — sidereal drift is invisibly slow per frame.
+		setTimeout(tick, 250);
+	}
+
+	setToNow();
+	tick();
+</script>
