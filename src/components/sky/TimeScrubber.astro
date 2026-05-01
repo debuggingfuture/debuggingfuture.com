@@ -24,6 +24,9 @@ const showGeo = !!(placeName || (latStr && lonStr));
 		<input type="range" id="sky-time" min="0" max="1439" step="1" aria-label="Time" />
 		<button type="button" id="sky-now" class="now-btn" title="Snap back to live time">Now</button>
 	</div>
+	<div class="credit">
+		Stars: <a href="https://codeberg.org/astronexus/hyg" target="_blank" rel="noopener noreferrer">HYG v3</a> (CC BY-SA 2.5)
+	</div>
 </aside>
 
 <style>
@@ -49,14 +52,20 @@ const showGeo = !!(placeName || (latStr && lonStr));
 		display: flex;
 		gap: 0.4rem;
 		align-items: baseline;
+		font: inherit;
 		font-size: 0.7rem;
-		opacity: 0.75;
+		font-variant-numeric: normal;
+		opacity: 0.95;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	.time-scrubber .geo {
+		justify-content: center;
+		text-align: center;
+	}
 	.time-scrubber .geo .place { font-weight: 600; opacity: 0.95; }
-	.time-scrubber .geo .sep { opacity: 0.4; }
+	.time-scrubber .geo .sep { opacity: 0.95; }
 	.time-scrubber .time-row {
 		display: flex;
 		gap: 0.5rem;
@@ -73,7 +82,7 @@ const showGeo = !!(placeName || (latStr && lonStr));
 	}
 	.time-scrubber .time-readout {
 		font-variant-numeric: tabular-nums;
-		opacity: 0.85;
+		opacity: 0.95;
 		min-width: 3.2em;
 		text-align: center;
 	}
@@ -129,6 +138,17 @@ const showGeo = !!(placeName || (latStr && lonStr));
 		cursor: pointer;
 	}
 	.time-scrubber .now-btn:hover { background: rgba(255, 255, 255, 0.1); }
+	.time-scrubber .credit {
+		font-size: 0.65rem;
+		opacity: 0.95;
+		text-align: right;
+	}
+	.time-scrubber .credit a {
+		color: inherit;
+		text-decoration: underline;
+		text-decoration-color: rgba(255, 255, 255, 0.3);
+	}
+	.time-scrubber .credit a:hover { opacity: 1; text-decoration-color: currentColor; }
 </style>
 
 <script>
