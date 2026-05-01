@@ -1,6 +1,5 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-import SubstackWidget from "../components/SubstackWidget.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import * as IntroPost from "../content/intro.md";
 ---
@@ -10,7 +9,6 @@ import * as IntroPost from "../content/intro.md";
 	<IntroPost.Content />
 	<hr />
 	<div class="container">
-		Subscribe via <a href="https://debuggingfuture.com/atom.xml">RSS/Atom</a> or substack
-		<SubstackWidget />
+		Subscribe via <a href="https://debuggingfuture.com/atom.xml">RSS/Atom</a>
 	</div>
 </SiteLayout>
