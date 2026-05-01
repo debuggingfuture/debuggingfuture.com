@@ -12,7 +12,10 @@ import remarkBreaks from "remark-breaks";
 export default defineConfig({
 	site: "https://debuggingfuture.com",
 	output: "static",
-	adapter: cloudflare({ platformProxy: { enabled: true } }),
+	adapter: cloudflare({
+		platformProxy: { enabled: true },
+		imageService: "passthrough",
+	}),
 	experimental: { session: true },
 	integrations: [
 		mdx({
