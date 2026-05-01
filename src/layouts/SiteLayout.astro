@@ -56,13 +56,14 @@ const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
 			html.site header nav {
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
+				justify-content: center;
 				gap: 0.4rem;
 				flex-wrap: nowrap;
 			}
 			html.site header nav .internal-links {
 				display: flex;
 				align-items: center;
+				justify-content: center;
 				gap: 0.4rem;
 				flex-wrap: nowrap;
 			}
@@ -97,6 +98,25 @@ const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
 				font-weight: 500;
 				text-decoration: none;
 			}
+			@media (max-width: 640px) {
+				html.site header {
+					width: auto;
+					max-width: calc(100% - 1rem);
+					margin: 1rem auto 0;
+					padding: 0.35rem 0.6rem;
+				}
+				html.site header nav { gap: 0.2rem; }
+				html.site header nav h2 { display: none; }
+				html.site header nav .internal-links { gap: 0.15rem; }
+				html.site header nav a {
+					padding: 0.35rem 0.45rem;
+					font-size: 0.95rem;
+				}
+				html.site header nav a.active {
+					padding: 0.35rem 0.6rem;
+					margin: 0 -0.15rem;
+				}
+			}
 		</style>
 		<style is:global>
 			html.site main.site-main {
@@ -124,6 +144,11 @@ const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
 				margin: 0 0 var(--space-2);
 				line-height: var(--text-leading);
 			}
+			html.site article.content-card h1 {
+				font-size: clamp(1.5rem, 8vw, 3.052em);
+				white-space: nowrap;
+				overflow-wrap: normal;
+			}
 			html.site article.content-card h2,
 			html.site article.content-card h3,
 			html.site article.content-card h4 {
@@ -150,6 +175,9 @@ const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
 				padding: 0 1px;
 			}
 			@media (max-width: 720px) {
+				html.site main.site-main {
+					margin: 3rem auto 4rem;
+				}
 				html.site article.content-card {
 					padding: var(--space-3) var(--space-2);
 				}
