@@ -1,86 +1,103 @@
 ---
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
 const posts = (await getCollection("hack")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-const images = import.meta.glob('../../content/hack/**/*.{jpeg,jpg,png}', { eager: true, import: 'default' });
+const images = import.meta.glob("../../content/hack/**/*.{jpeg,jpg,png}", {
+	eager: true,
+	import: "default",
+});
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.post-card * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			.post-card:first-child img {
-				width: 100%;
-			}
-			.post-card:first-child .title {
-				font-size: 2.369rem;
-			}
-			.post-card img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			.post-card a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			.post-card a:hover h4,
-			.post-card a:hover .date {
-				color: rgb(var(--accent));
-			}
-			.post-card a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main class="max-w-4xl mx-auto">
-			<section>
-				<div class="flex flex-wrap gap-8 lg:gap-6">
-					{
-						posts.map((post, index) => {
-							const thumbnailPath = post.data.thumbnail ? `../../content/hack/${post.id}/${post.data.thumbnail}` : null;
-							const thumbnailImage = thumbnailPath ? images[thumbnailPath] : null;
-							return (
-								<div class={`post-card flex-shrink-0 w-full ${index === 0 ? ' mb-4 text-center' : ''}`}>
-									<a href={`/hack/${post.id}/`}>
-										{thumbnailImage && (
-											<Image width={720} height={360} src={thumbnailImage} alt="" />
-										)}
-										<h4 class="title">{post.data.title}</h4>
-										<p class="date">
-											{/* <FormattedDate date={post.data.date} /> */}
-										</p>
-									</a>
-								</div>
-							);
-						})
-					}
-				</div>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<SiteLayout title={SITE_TITLE} description={SITE_DESCRIPTION} bare>
+	<ul class="hack-list">
+		{posts.map((post) => {
+			const thumbnailPath = post.data.thumbnail
+				? `../../content/hack/${post.id}/${post.data.thumbnail}`
+				: null;
+			const thumbnailImage = thumbnailPath ? images[thumbnailPath] : null;
+			return (
+				<li class="hack-card">
+					<a href={`/hack/${post.id}/`}>
+						{thumbnailImage && (
+							<Image width={720} height={360} src={thumbnailImage} alt="" class="thumb" />
+						)}
+						<div class="body">
+							<h3 class="title">{post.data.title}</h3>
+							<footer class="meta">
+								<FormattedDate date={post.data.date} />
+							</footer>
+						</div>
+					</a>
+				</li>
+			);
+		})}
+	</ul>
+</SiteLayout>
+
+<style>
+	.hack-list {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.hack-card {
+		border-radius: var(--card-radius);
+		background: var(--card-bg);
+		color: var(--card-fg);
+		border: var(--card-border);
+		box-shadow: var(--card-shadow);
+		overflow: hidden;
+		transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+	}
+	.hack-card:hover {
+		transform: scale(1.025);
+		box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+		border-color: rgba(0, 0, 0, 0.14);
+	}
+	.hack-card a,
+	.hack-card a:hover {
+		display: block;
+		text-decoration: none !important;
+		color: inherit !important;
+		background: none !important;
+		font-weight: inherit !important;
+		padding: 0 !important;
+	}
+	.hack-card .thumb {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 0;
+		margin: 0;
+	}
+	.hack-card .body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 1.5rem 1.75rem;
+	}
+	.hack-card .title {
+		margin: 0;
+		font-size: 1.45rem;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+	.hack-card .meta {
+		font-size: 0.95rem;
+		color: rgba(0, 0, 0, 0.55);
+		font-variant-numeric: tabular-nums;
+	}
+	@media (max-width: 720px) {
+		.hack-card .body { padding: 1.25rem 1rem; }
+	}
+</style>

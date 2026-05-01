@@ -5,7 +5,7 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2>{SITE_TITLE}</h2>
 		<div class="internal-links text-xs sm:text-base">
 			<HeaderLink href="/">
 				<span class="sm:hidden">@</span>
@@ -18,56 +18,3 @@ import HeaderLink from "./HeaderLink.astro";
 		</div>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-	nav a.nav-hack {
-		border-bottom: 8px solid #be1e2d;
-	}
-	nav a.nav-blog {
-		border-bottom: 8px solid #ffde17;
-	}
-	nav a.nav-life {
-		border-bottom: 8px solid #21409a;
-	}
-	.internal-links a:first-child {
-		font-weight: bold;
-	}
-</style>
