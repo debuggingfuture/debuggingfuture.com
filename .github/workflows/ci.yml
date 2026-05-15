@@ -3,6 +3,8 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +12,7 @@ permissions:
   deployments: write
 
 concurrency:
-  group: cloudflare-pages
+  group: cloudflare-pages-${{ github.ref }}
   cancel-in-progress: false
 
 env:
@@ -22,9 +24,9 @@ defaults:
     shell: bash
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    name: Build and deploy
+    name: Build and smoke test
     steps:
       - uses: actions/checkout@v4
       - name: Setup pnpm
@@ -40,6 +42,28 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build with Astro
         run: pnpm run build
+      - name: Smoke test build output
+        run: pnpm run smoke
+      - name: Upload build artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 1
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Pages
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
