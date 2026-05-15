@@ -43,31 +43,7 @@ jobs:
       - name: Build with Astro
         run: pnpm run build
       - name: Smoke test build output
-        run: |
-          set -euo pipefail
-          required=(
-            "dist/index.html"
-            "dist/about/index.html"
-            "dist/blog/index.html"
-            "dist/hack/index.html"
-            "dist/life/index.html"
-            "dist/rss.xml"
-            "dist/sitemap-index.xml"
-            "dist/_worker.js"
-          )
-          missing=0
-          for f in "${required[@]}"; do
-            if [[ ! -s "$f" ]]; then
-              echo "::error::missing or empty: $f"
-              missing=1
-            fi
-          done
-          if [[ "$missing" -ne 0 ]]; then exit 1; fi
-          grep -q "<title>Debug 未來</title>" dist/index.html \
-            || { echo "::error::homepage title missing"; exit 1; }
-          grep -q "</rss>" dist/rss.xml \
-            || { echo "::error::rss.xml malformed"; exit 1; }
-          echo "smoke test passed"
+        run: pnpm run smoke
       - name: Upload build artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@v4

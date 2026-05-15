@@ -5,6 +5,7 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
+		"smoke": "node scripts/smoke.mjs",
 		"astro": "astro",
 		"check:fix": "biome check . --write --no-errors-on-unmatched"
 	},
