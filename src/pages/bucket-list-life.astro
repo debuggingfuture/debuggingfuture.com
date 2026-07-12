@@ -1,0 +1,74 @@
+---
+import BucketMap, { type Waypoint } from "../components/BucketMap.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+// Edit these freely — `detail` is the mission log shown when a planet is opened.
+// `star` names the destination after a real Yale Bright Star catalog star.
+const waypoints: Waypoint[] = [
+	{
+		year: 2027,
+		title: "HK Visit Trip",
+		image: "/waypoints/hk-visit.jpg",
+		star: "Sirius",
+		detail: `Return to the neon city-world of Hong Kong — reconnect with family and friends, and revisit the streets that shaped me.
+- Visit the Peak`,
+	},
+	{
+		year: 2027,
+		title: "FUK Trip",
+		image: "/waypoints/fuk-trip.jpg",
+		star: "Vega",
+		detail: `Chart Fukuoka. Scout the Kyushu base — food, neighbourhoods, and the feel of everyday life on the ground.
+- Visit mountain
+- Visit Marine World Uminonakamichi`,
+	},
+	{
+		year: 2028,
+		title: "Japan Visa",
+		image: "/waypoints/japan-visa.jpg",
+		star: "Altair",
+		detail:
+			"Pass through the gateway: secure the right visa to live in Japan. The waypoint that unlocks everything after it.",
+	},
+	{
+		year: 2029,
+		title: "Japan School",
+		image: "/waypoints/japan-school.jpg",
+		star: "Deneb",
+		detail:
+			"Enrol in school in Japan — language and study under the aurora. Turn visiting into belonging.",
+	},
+	{
+		year: 2030,
+		title: "Europe Trip",
+		image: "/waypoints/europe-trip.jpg",
+		star: "Arcturus",
+		detail:
+			"A proper voyage across the old-world systems of Europe. New cities, old streets, and a reset of perspective.",
+	},
+	{
+		year: 2031,
+		title: "Property",
+		image: "/waypoints/property.jpg",
+		star: "Polaris",
+		detail:
+			"Make planetfall for good — a place of my own. The final destination on this trajectory.",
+	},
+];
+---
+
+<SiteLayout
+	title="Life Voyage"
+	description="An interstellar bucket-list map for my life — planets to chart from 2027 to 2031."
+	bare
+>
+	<BucketMap
+		heading="Life Voyage 活"
+		subheading="Every planet is a bucket-list destination. Tap one for the mission briefing, then log your arrival to light the warp trail."
+		storageKey="life"
+		craft="🚀"
+		accent="#34d399"
+		accentDeep="#0f766e"
+		waypoints={waypoints}
+	/>
+</SiteLayout>
