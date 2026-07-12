@@ -1,0 +1,722 @@
+---
+// Interstellar "voyage" bucket-list map. Each waypoint is a planet/star system
+// on a warp trajectory through deep space. Click a planet for a mission
+// briefing; log arrivals to light the trail. Progress persists in localStorage.
+import { BRIGHT_STARS, starColor } from "../astronomy/stars";
+
+export interface Waypoint {
+	year: string | number;
+	title: string;
+	/** Path to a representative image under /waypoints, e.g. "/waypoints/hk-visit.jpg". */
+	image: string;
+	/** Free-form mission log shown when the planet is opened. Edit freely. */
+	detail: string;
+	/** Real catalog star this system is named for, e.g. "Sirius" (Yale Bright Star). */
+	star?: string;
+}
+
+interface Props {
+	heading: string;
+	subheading?: string;
+	/** Namespaces localStorage so life/work progress don't collide. */
+	storageKey: string;
+	/** Emoji spacecraft docked at the current destination. */
+	craft?: string;
+	/** Accent hue (bright) + deep variant, as CSS colors. */
+	accent?: string;
+	accentDeep?: string;
+	waypoints: Waypoint[];
+}
+
+const {
+	heading,
+	subheading,
+	storageKey,
+	craft = "🚀",
+	accent = "#34d399",
+	accentDeep = "#0f766e",
+	waypoints,
+} = Astro.props;
+
+// --- Layout: a vertical sine-weave warp trajectory (a journey outward) ---
+const VW = 1000;
+const AMP = 300;
+const PAD_TOP = 185;
+const ROW_STEP = 325;
+const PAD_BOTTOM = 300;
+const n = waypoints.length;
+const H = PAD_TOP + (n - 1) * ROW_STEP + PAD_BOTTOM;
+
+const slug = (s: string) =>
+	s
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/^-+|-+$/g, "");
+
+const xAt = (i: number) => 500 + AMP * Math.sin((i * Math.PI) / 2);
+const yAt = (i: number) => PAD_TOP + i * ROW_STEP;
+
+const starByName = new Map(BRIGHT_STARS.map((s) => [s.name, s] as const));
+
+const nodes = waypoints.map((w, i) => {
+	const x = xAt(i);
+	const y = yAt(i);
+	const rec = w.star ? starByName.get(w.star) : undefined;
+	return {
+		...w,
+		i,
+		id: `${w.year}-${slug(w.title)}`,
+		x,
+		y,
+		xPct: (x / VW) * 100,
+		yPct: (y / H) * 100,
+		starName: rec?.name ?? w.star ?? "",
+		starHue: rec ? starColor(rec.ci) : "#c7d2fe",
+		starMag: rec?.mag,
+	};
+});
+
+const segments = nodes.slice(0, -1).map((a, i) => {
+	const b = nodes[i + 1];
+	const c1 = `${a.x} ${a.y + ROW_STEP * 0.5}`;
+	const c2 = `${b.x} ${b.y - ROW_STEP * 0.5}`;
+	return {
+		from: a.i,
+		to: b.i,
+		d: `M ${a.x} ${a.y} C ${c1}, ${c2}, ${b.x} ${b.y}`,
+	};
+});
+---
+
+<section
+	class="voyage"
+	data-storage={storageKey}
+	data-craft={craft}
+	data-total={n}
+	style={`--accent:${accent};--accent-deep:${accentDeep};`}
+>
+	<div class="glass" aria-hidden="true"></div>
+
+	<div class="hud">
+		<div class="hud-title">
+			<span class="online"><span class="online-dot"></span>NAV ONLINE</span>
+			<h1>{heading}</h1>
+			{subheading && <p class="hud-sub">{subheading}</p>}
+		</div>
+		<div class="hud-gauge">
+			<div class="gauge-top">
+				<span class="gauge-label">Systems charted</span>
+				<span class="gauge-read"><b data-xp-count>0</b> / {n} · <span data-xp-pct>0%</span></span>
+			</div>
+			<div class="gauge-track"><div class="gauge-fill" data-xp-fill></div></div>
+		</div>
+		<ul class="legend">
+			<li><span class="dot d-log"></span>Logged</li>
+			<li><span class="dot d-dest"></span>Destination</li>
+			<li><span class="dot d-unc"></span>Uncharted</li>
+		</ul>
+	</div>
+
+	<div class="parallax">
+		<div class="stage" style={`aspect-ratio:${VW} / ${H};`}>
+			<svg class="trail" viewBox={`0 0 ${VW} ${H}`} fill="none" aria-hidden="true" focusable="false">
+				{segments.map((s) => (
+					<path class="seg" data-from={s.from} data-to={s.to} d={s.d} />
+				))}
+			</svg>
+
+			{nodes.map((nd, idx) => (
+				<button
+					class="node"
+					type="button"
+					data-index={nd.i}
+					data-id={nd.id}
+					data-year={String(nd.year)}
+					data-title={nd.title}
+					data-img={nd.image}
+					data-detail={nd.detail}
+					data-star={nd.starName}
+					data-starhue={nd.starHue}
+					data-starmag={nd.starMag != null ? String(nd.starMag) : ""}
+					data-status={nd.i === 0 ? "active" : "locked"}
+					style={`left:${nd.xPct}%;top:${nd.yPct}%;`}
+					aria-label={`${nd.year} — ${nd.title}${nd.starName ? ` — ${nd.starName} system` : ""}`}
+				>
+					<span class="craft" aria-hidden="true">{craft}</span>
+					<span class="thumb">
+						<img
+							class="pic"
+							src={nd.image}
+							alt={nd.title}
+							loading={idx === 0 ? "eager" : "lazy"}
+							decoding="async"
+							draggable="false"
+						/>
+						<span class="sphere" aria-hidden="true"></span>
+						<span class="badge check" aria-hidden="true">✓</span>
+						<span class="badge lock" aria-hidden="true">🔒</span>
+					</span>
+					<span class="plate">
+						<span class="stardate">{nd.year}</span>
+						<span class="pname">{nd.title}</span>
+						<span class="pstate" data-plate-state>Uncharted</span>
+					</span>
+				</button>
+			))}
+		</div>
+	</div>
+
+	<div class="modal" data-modal hidden>
+		<div class="modal-scrim" data-modal-close></div>
+		<div class="brief" role="dialog" aria-modal="true" aria-labelledby="voyage-brief-title">
+			<span class="corner c-tl"></span><span class="corner c-tr"></span>
+			<span class="corner c-bl"></span><span class="corner c-br"></span>
+			<button class="brief-x" type="button" data-modal-close aria-label="Close">✕</button>
+			<div class="brief-visual">
+				<span class="brief-orb">
+					<img class="brief-img" data-modal-img src="" alt="" decoding="async" />
+					<span class="sphere" aria-hidden="true"></span>
+				</span>
+			</div>
+			<div class="brief-body">
+				<span class="brief-eyebrow">Mission briefing</span>
+				<span class="brief-stardate" data-modal-year>2027</span>
+				<h2 class="brief-title" id="voyage-brief-title" data-modal-title>System</h2>
+				<span class="brief-system" data-modal-system></span>
+				<span class="brief-state" data-modal-state>Uncharted</span>
+				<p class="brief-detail" data-modal-detail>…</p>
+				<button class="brief-action" type="button" data-modal-action>◉ Log arrival</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="toast" data-toast aria-live="polite"></div>
+</section>
+
+<style>
+	.voyage {
+		--gold: #ffd45a;
+		--panel: rgba(10, 13, 24, 0.62);
+		--panel-solid: rgba(11, 14, 26, 0.94);
+		--ink: #eaf0ff;
+		--ink-dim: rgba(234, 240, 255, 0.62);
+		--line: rgba(120, 160, 255, 0.16);
+		--mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+		position: relative;
+		display: block;
+		width: 100%;
+		background: transparent;
+		color: var(--ink);
+		font-family: "BAUHAUS", "Noto Serif TC", system-ui, sans-serif;
+	}
+
+	/* Liquid-glass container — frosts the site's live star sky showing through.
+	   A sibling layer (not an ancestor of the fixed modal) so backdrop-filter
+	   doesn't trap position:fixed descendants. */
+	.glass {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+		border-radius: 26px;
+		background: linear-gradient(160deg, rgba(24, 30, 54, 0.4) 0%, rgba(8, 10, 20, 0.32) 60%, rgba(10, 12, 24, 0.42) 100%);
+		border: 1px solid rgba(150, 180, 255, 0.16);
+		box-shadow:
+			0 30px 90px rgba(0, 0, 0, 0.45),
+			inset 0 1px 0 rgba(255, 255, 255, 0.13),
+			inset 0 0 70px rgba(120, 140, 220, 0.06);
+		backdrop-filter: blur(8px) saturate(1.35);
+		-webkit-backdrop-filter: blur(8px) saturate(1.35);
+	}
+	/* Specular top highlight for the "liquid" sheen. */
+	.glass::before {
+		content: "";
+		position: absolute;
+		inset: 0 0 auto 0;
+		height: 42%;
+		border-radius: 26px 26px 0 0;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+		pointer-events: none;
+	}
+
+	/* ---- HUD ---- */
+	.hud {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		gap: 1rem;
+		padding: 1.5rem clamp(1.1rem, 4vw, 2rem) 1.1rem;
+	}
+	.online {
+		display: inline-flex; align-items: center; gap: 0.45rem;
+		font-family: var(--mono);
+		font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+		color: var(--accent);
+	}
+	.online-dot {
+		width: 7px; height: 7px; border-radius: 50%;
+		background: var(--accent);
+		box-shadow: 0 0 10px var(--accent);
+		animation: blink 1.6s steps(1) infinite;
+	}
+	@keyframes blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: 0.25; } }
+	.hud-title h1 {
+		margin: 0.4rem 0 0;
+		font-size: clamp(1.7rem, 6.5vw, 2.7rem);
+		line-height: 1.05;
+		color: var(--ink);
+		letter-spacing: 0.01em;
+		text-shadow: 0 0 30px color-mix(in srgb, var(--accent) 40%, transparent);
+	}
+	.hud-sub {
+		margin: 0.5rem 0 0;
+		max-width: 52ch;
+		color: var(--ink-dim);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	.hud-gauge { display: grid; gap: 0.4rem; max-width: 460px; }
+	.gauge-top {
+		display: flex; justify-content: space-between; align-items: baseline;
+		font-family: var(--mono);
+		font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+		color: var(--ink-dim);
+	}
+	.gauge-read b { color: var(--gold); }
+	.gauge-read [data-xp-pct] { color: var(--accent); }
+	.gauge-track {
+		height: 12px; border-radius: 3px; overflow: hidden;
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid var(--line);
+		/* segmented look */
+		background-image: repeating-linear-gradient(90deg, transparent 0 14px, rgba(0,0,0,0.5) 14px 16px);
+	}
+	.gauge-fill {
+		height: 100%; width: 0%;
+		background: linear-gradient(90deg, var(--accent-deep), var(--accent) 70%, var(--gold));
+		box-shadow: 0 0 18px var(--accent);
+		transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.legend {
+		display: flex; flex-wrap: wrap; gap: 1.1rem;
+		margin: 0; padding: 0; list-style: none;
+		font-family: var(--mono);
+		font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+		color: var(--ink-dim);
+	}
+	.legend li { display: inline-flex; align-items: center; gap: 0.45rem; }
+	.dot { width: 10px; height: 10px; border-radius: 50%; }
+	.d-log { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+	.d-dest { background: #fff; box-shadow: 0 0 8px #fff; }
+	.d-unc { background: rgba(160, 175, 220, 0.35); }
+
+	/* ---- Stage / trajectory ---- */
+	.parallax { position: relative; z-index: 3; }
+	.stage {
+		position: relative;
+		width: 100%;
+		max-width: 760px;
+		margin: 0 auto;
+		padding-bottom: 1rem;
+	}
+	.trail { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+	.seg {
+		stroke: color-mix(in srgb, var(--accent) 70%, transparent);
+		stroke-width: 4;
+		stroke-linecap: round;
+		stroke-dasharray: 3 15;
+		opacity: 0.9;
+		filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 70%, transparent));
+		animation: warpflow 1s linear infinite;
+	}
+	.seg.is-done {
+		stroke: var(--accent);
+		stroke-width: 5;
+		stroke-dasharray: none;
+		opacity: 1;
+		filter: drop-shadow(0 0 7px var(--accent));
+		animation: none;
+	}
+	@keyframes warpflow { to { stroke-dashoffset: -18; } }
+
+	/* ---- Planet nodes ---- */
+	.node {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		display: grid;
+		justify-items: center;
+		gap: 1.6rem;
+		width: clamp(118px, 30vw, 184px);
+		padding: 0; background: none; border: none;
+		cursor: pointer; color: var(--ink); font: inherit;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.thumb {
+		position: relative;
+		width: clamp(96px, 24vw, 132px);
+		aspect-ratio: 1;
+	}
+	/* circular "planet" image — border + glow live on the image so rim badges
+	   aren't clipped by a circular overflow */
+	.pic {
+		width: 100%; height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		display: block;
+		user-select: none;
+		border: 1px solid rgba(255, 255, 255, 0.18);
+		box-shadow:
+			0 12px 30px rgba(0, 0, 0, 0.5),
+			0 0 22px color-mix(in srgb, var(--accent) 22%, transparent);
+		transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 300ms ease, border-color 300ms ease, filter 300ms ease;
+	}
+	/* spherical shading overlay — turns a flat disc into a lit 3D globe.
+	   Light source top-left: specular highlight, terminator shadow, limb darkening. */
+	.sphere {
+		position: absolute; inset: 0;
+		border-radius: 50%;
+		pointer-events: none;
+		background:
+			radial-gradient(circle at 30% 26%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.12) 13%, transparent 34%),
+			radial-gradient(circle at 72% 80%, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.22) 38%, transparent 62%),
+			radial-gradient(circle at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.28) 82%, rgba(0, 0, 0, 0.6) 100%);
+		box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.55);
+	}
+	/* thin bright atmosphere arc on the lit limb */
+	.sphere::before {
+		content: ""; position: absolute; inset: 0; border-radius: 50%;
+		background: radial-gradient(circle at 34% 30%, transparent 60%, color-mix(in srgb, var(--accent) 40%, transparent) 82%, transparent 100%);
+		opacity: 0.5;
+	}
+	.badge {
+		position: absolute; left: 84%; top: 84%;
+		transform: translate(-50%, -50%);
+		width: 24px; height: 24px;
+		display: none; place-items: center;
+		border-radius: 50%;
+		font-size: 0.8rem; line-height: 1;
+		border: 1.5px solid rgba(8, 10, 18, 0.9);
+	}
+	.badge.check {
+		background: var(--accent); color: #04121a; font-weight: 800;
+		box-shadow: 0 2px 10px color-mix(in srgb, var(--accent) 60%, transparent);
+	}
+	.badge.lock {
+		background: rgba(6, 9, 18, 0.88);
+	}
+	.craft {
+		position: absolute;
+		top: clamp(-56px, -15vw, -46px);
+		left: 50%;
+		transform: translateX(-50%) rotate(-12deg);
+		font-size: clamp(1.7rem, 5vw, 2.2rem);
+		filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 12px var(--accent));
+		opacity: 0;
+		pointer-events: none;
+		animation: hover 2.4s ease-in-out infinite;
+	}
+	.plate {
+		display: grid; justify-items: center; gap: 0.25rem; text-align: center;
+		padding: 0.5rem 0.85rem 0.55rem;
+		border-radius: 10px;
+		background: rgba(6, 9, 20, 0.62);
+		border: 1px solid var(--line);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+	}
+	.stardate {
+		font-family: var(--mono);
+		font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em;
+		padding: 0.1rem 0.5rem; border-radius: 4px;
+		background: rgba(255, 255, 255, 0.06);
+		color: var(--accent);
+	}
+	.pname {
+		font-size: clamp(0.86rem, 2.6vw, 1rem); font-weight: 600; line-height: 1.15;
+		color: var(--ink);
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+		overflow-wrap: anywhere;
+	}
+	.pstate {
+		font-family: var(--mono);
+		font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
+		color: var(--ink-dim);
+	}
+
+	/* hover / focus */
+	.node:hover .pic, .node:focus-visible .pic {
+		transform: scale(1.07);
+		border-color: var(--accent);
+		box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55), 0 0 30px color-mix(in srgb, var(--accent) 45%, transparent);
+	}
+	.node:focus-visible { outline: none; }
+
+	/* status: destination (active) */
+	.node[data-status="active"] .craft { opacity: 1; }
+	.node[data-status="active"] .pic {
+		border-color: var(--accent);
+		animation: pulseframe 2.6s ease-in-out infinite;
+	}
+	.node[data-status="active"] .pstate { color: #fff; }
+	.node[data-status="active"] .stardate { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+	/* status: logged (done) */
+	.node[data-status="done"] .badge.check { display: grid; }
+	.node[data-status="done"] .pic { border-color: var(--accent); }
+	.node[data-status="done"] .pstate { color: var(--accent); }
+
+	/* status: uncharted (locked) — dimmed but clearly visible */
+	.node[data-status="locked"] .pic { filter: saturate(0.5) brightness(0.6); }
+	.node[data-status="locked"] .badge.lock { display: grid; }
+	.node[data-status="locked"] .pname { color: var(--ink-dim); }
+
+	@keyframes hover { 0%, 100% { transform: translateX(-50%) rotate(-12deg) translateY(0); } 50% { transform: translateX(-50%) rotate(-12deg) translateY(-7px); } }
+	@keyframes pulseframe {
+		0%, 100% { box-shadow: 0 14px 34px rgba(0,0,0,0.5), 0 0 16px color-mix(in srgb, var(--accent) 40%, transparent); }
+		50% { box-shadow: 0 14px 34px rgba(0,0,0,0.5), 0 0 30px color-mix(in srgb, var(--accent) 75%, transparent); }
+	}
+
+	/* ---- Mission briefing modal ---- */
+	.modal[hidden] { display: none; }
+	.modal {
+		position: fixed; inset: 0; z-index: 80;
+		display: grid; place-items: center; padding: 1.25rem;
+	}
+	.modal-scrim {
+		position: absolute; inset: 0;
+		background: rgba(2, 4, 10, 0.72);
+		backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+	}
+	.brief {
+		position: relative;
+		width: min(760px, 100%);
+		display: grid;
+		grid-template-columns: 1.1fr 1.3fr;
+		border-radius: 18px;
+		background: var(--panel-solid);
+		border: 1px solid var(--line);
+		box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), inset 0 0 60px rgba(0, 0, 0, 0.4);
+		overflow: hidden;
+		animation: pop 260ms cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.corner { position: absolute; width: 16px; height: 16px; border: 2px solid var(--accent); z-index: 2; opacity: 0.8; }
+	.c-tl { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
+	.c-tr { top: 8px; right: 8px; border-left: 0; border-bottom: 0; }
+	.c-bl { bottom: 8px; left: 8px; border-right: 0; border-top: 0; }
+	.c-br { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
+	.brief-x {
+		position: absolute; top: 12px; right: 14px; z-index: 3;
+		width: 34px; height: 34px; border-radius: 50%;
+		border: 1px solid var(--line); background: rgba(255, 255, 255, 0.06);
+		color: var(--ink); cursor: pointer; font-size: 0.9rem;
+	}
+	.brief-x:hover { background: rgba(255, 255, 255, 0.14); }
+	.brief-visual {
+		position: relative;
+		background:
+			radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 62%),
+			radial-gradient(120% 120% at 50% 0%, #12163a, #05060d);
+		display: grid; place-items: center; padding: 1.4rem; min-height: 240px;
+	}
+	.brief-orb {
+		position: relative;
+		width: 76%; aspect-ratio: 1;
+		border-radius: 50%;
+		box-shadow:
+			0 20px 44px rgba(0, 0, 0, 0.55),
+			0 0 44px color-mix(in srgb, var(--accent) 32%, transparent);
+	}
+	.brief-img {
+		width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+		filter: saturate(1.06);
+		border: 1px solid rgba(255, 255, 255, 0.16);
+		display: block;
+	}
+	.brief-body { padding: 1.8rem 1.7rem 1.7rem; }
+	.brief-eyebrow {
+		font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase;
+		color: var(--ink-dim);
+	}
+	.brief-stardate {
+		display: block; margin-top: 0.5rem;
+		font-family: var(--mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em;
+		color: var(--accent);
+	}
+	.brief-title { margin: 0.2rem 0 0.7rem; font-size: 1.7rem; line-height: 1.1; color: var(--ink); }
+	.brief-state {
+		display: inline-block; margin-bottom: 1rem;
+		font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase;
+		padding: 0.24rem 0.7rem; border-radius: 4px;
+		background: rgba(255, 255, 255, 0.06); border: 1px solid var(--line); color: var(--ink-dim);
+	}
+	.brief[data-state="done"] .brief-state { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+	.brief[data-state="active"] .brief-state { background: rgba(255,255,255,0.12); color: #fff; }
+	.brief-system {
+		display: block;
+		margin: 0.15rem 0 0.7rem;
+		font-family: var(--mono);
+		font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+		text-shadow: 0 0 10px currentColor;
+	}
+	.brief-system:empty { display: none; }
+	.brief-detail { margin: 0 0 1.4rem; color: var(--ink-dim); line-height: 1.65; font-size: 0.98rem; white-space: pre-line; }
+	.brief-action {
+		width: 100%; padding: 0.85rem 1rem;
+		border-radius: 10px; border: none; cursor: pointer;
+		font: inherit; font-weight: 700; letter-spacing: 0.06em;
+		font-family: var(--mono); text-transform: uppercase; font-size: 0.82rem;
+		color: #04121a;
+		background: linear-gradient(90deg, var(--accent), var(--gold));
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px color-mix(in srgb, var(--accent) 40%, transparent);
+		transition: transform 140ms ease, filter 140ms ease;
+	}
+	.brief-action:hover { transform: translateY(-1px); filter: brightness(1.06); }
+	.brief[data-state="done"] .brief-action {
+		background: rgba(255, 255, 255, 0.07); color: var(--ink);
+		border: 1px solid var(--line); box-shadow: none;
+	}
+	@keyframes pop { from { transform: scale(0.95) translateY(8px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
+	@media (max-width: 620px) {
+		.brief { grid-template-columns: 1fr; }
+		.brief-visual { min-height: 160px; padding: 1.1rem; }
+		.brief-orb { width: 58%; }
+	}
+
+	/* ---- Toast ---- */
+	.toast {
+		position: fixed; left: 50%; bottom: 2.2rem; z-index: 90;
+		transform: translateX(-50%) translateY(140%);
+		padding: 0.72rem 1.3rem; border-radius: 999px;
+		background: var(--panel-solid); border: 1px solid var(--accent);
+		color: var(--accent);
+		font-family: var(--mono); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em;
+		box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6), 0 0 24px color-mix(in srgb, var(--accent) 40%, transparent);
+		opacity: 0; pointer-events: none;
+		transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1), opacity 380ms ease;
+	}
+	.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+	@media (prefers-reduced-motion: reduce) {
+		.neb, .planet, .craft, .orbit, .seg, .online-dot,
+		.gauge-fill, .brief, .toast, .brief-img { animation: none !important; transition: none !important; }
+	}
+</style>
+
+<script>
+	type Status = "done" | "active" | "locked";
+
+	function initVoyage(root: HTMLElement) {
+		const storageKey = `bucketmap:${root.dataset.storage}`;
+		const total = Number(root.dataset.total) || 0;
+		const craft = root.dataset.craft || "🚀";
+
+		const nodes = Array.from(root.querySelectorAll<HTMLButtonElement>(".node"));
+		const segs = Array.from(root.querySelectorAll<SVGPathElement>(".seg"));
+		const xpCount = root.querySelector<HTMLElement>("[data-xp-count]");
+		const xpPct = root.querySelector<HTMLElement>("[data-xp-pct]");
+		const xpFill = root.querySelector<HTMLElement>("[data-xp-fill]");
+		const toast = root.querySelector<HTMLElement>("[data-toast]");
+
+		const modal = root.querySelector<HTMLElement>("[data-modal]");
+		const mImg = root.querySelector<HTMLImageElement>("[data-modal-img]");
+		const mYear = root.querySelector<HTMLElement>("[data-modal-year]");
+		const mTitle = root.querySelector<HTMLElement>("[data-modal-title]");
+		const mState = root.querySelector<HTMLElement>("[data-modal-state]");
+		const mSystem = root.querySelector<HTMLElement>("[data-modal-system]");
+		const mDetail = root.querySelector<HTMLElement>("[data-modal-detail]");
+		const mAction = root.querySelector<HTMLButtonElement>("[data-modal-action]");
+		const brief = modal?.querySelector<HTMLElement>(".brief");
+
+		const load = (): Set<string> => {
+			try {
+				const raw = localStorage.getItem(storageKey);
+				return new Set<string>(raw ? JSON.parse(raw) : []);
+			} catch { return new Set<string>(); }
+		};
+		const save = (s: Set<string>) => {
+			try { localStorage.setItem(storageKey, JSON.stringify([...s])); } catch { /* ignore */ }
+		};
+
+		let done = load();
+		let openIndex: number | null = null;
+		const stateLabel = (st: Status) =>
+			st === "done" ? "Logged" : st === "active" ? "Destination" : "Uncharted";
+
+		const render = () => {
+			let firstOpen = nodes.findIndex((nd) => !done.has(nd.dataset.id || ""));
+			nodes.forEach((nd, i) => {
+				const id = nd.dataset.id || "";
+				const st: Status = done.has(id) ? "done" : i === firstOpen ? "active" : "locked";
+				nd.dataset.status = st;
+				const plate = nd.querySelector<HTMLElement>("[data-plate-state]");
+				if (plate) plate.textContent = stateLabel(st);
+			});
+			segs.forEach((seg) => {
+				const a = nodes[Number(seg.dataset.from)];
+				const b = nodes[Number(seg.dataset.to)];
+				seg.classList.toggle("is-done", done.has(a?.dataset.id || "") && done.has(b?.dataset.id || ""));
+			});
+			const count = done.size;
+			const pct = total ? Math.round((count / total) * 100) : 0;
+			if (xpCount) xpCount.textContent = String(count);
+			if (xpPct) xpPct.textContent = `${pct}%`;
+			if (xpFill) xpFill.style.width = `${pct}%`;
+		};
+
+		let toastTimer: number | undefined;
+		const showToast = (msg: string) => {
+			if (!toast) return;
+			toast.textContent = msg;
+			toast.classList.add("show");
+			window.clearTimeout(toastTimer);
+			toastTimer = window.setTimeout(() => toast.classList.remove("show"), 2000);
+		};
+
+		const openModal = (i: number) => {
+			const nd = nodes[i];
+			if (!nd || !modal) return;
+			openIndex = i;
+			const id = nd.dataset.id || "";
+			const isDone = done.has(id);
+			const st = nd.dataset.status as Status;
+			if (mImg) { mImg.src = nd.dataset.img || ""; mImg.alt = nd.dataset.title || ""; }
+			if (mYear) mYear.textContent = `STARDATE ${nd.dataset.year || ""}`;
+			if (mTitle) mTitle.textContent = nd.dataset.title || "";
+			if (mSystem) {
+				const star = nd.dataset.star || "";
+				const mag = nd.dataset.starmag || "";
+				mSystem.textContent = star ? `✦ ${star} system${mag ? ` · mag ${mag}` : ""}` : "";
+				mSystem.style.color = nd.dataset.starhue || "#c7d2fe";
+			}
+			if (mDetail) mDetail.textContent = nd.dataset.detail || "";
+			if (mState) mState.textContent = isDone ? "Logged · arrival confirmed" : st === "active" ? "Current destination" : "Uncharted system";
+			if (brief) brief.dataset.state = isDone ? "done" : st;
+			if (mAction) mAction.textContent = isDone ? "↺ Clear log" : "◉ Log arrival";
+			modal.hidden = false;
+			mAction?.focus();
+		};
+		const closeModal = () => { if (modal) modal.hidden = true; openIndex = null; };
+
+		const toggle = () => {
+			if (openIndex === null) return;
+			const id = nodes[openIndex].dataset.id || "";
+			if (done.has(id)) done.delete(id);
+			else { done.add(id); showToast(`${craft} Arrival logged  ·  +1`); }
+			save(done);
+			render();
+			openModal(openIndex);
+		};
+
+		nodes.forEach((nd, i) => nd.addEventListener("click", () => openModal(i)));
+		mAction?.addEventListener("click", toggle);
+		modal?.querySelectorAll("[data-modal-close]").forEach((el) => el.addEventListener("click", closeModal));
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape" && modal && !modal.hidden) closeModal();
+		});
+
+		render();
+	}
+
+	document.querySelectorAll<HTMLElement>(".voyage").forEach((el) => initVoyage(el));
+</script>
