@@ -13,6 +13,8 @@ export interface Waypoint {
 	detail: string;
 	/** Real catalog star this system is named for, e.g. "Sirius" (Yale Bright Star). */
 	star?: string;
+	/** Optional photo attribution shown under the briefing image (e.g. CC-BY credit). */
+	imageCredit?: string;
 }
 
 interface Props {
@@ -138,6 +140,7 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 					data-star={nd.starName}
 					data-starhue={nd.starHue}
 					data-starmag={nd.starMag != null ? String(nd.starMag) : ""}
+					data-imgcredit={nd.imageCredit ?? ""}
 					data-status={nd.i === 0 ? "active" : "locked"}
 					style={`left:${nd.xPct}%;top:${nd.yPct}%;`}
 					aria-label={`${nd.year} — ${nd.title}${nd.starName ? ` — ${nd.starName} system` : ""}`}
@@ -168,7 +171,7 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 
 	<div class="modal" data-modal hidden>
 		<div class="modal-scrim" data-modal-close></div>
-		<div class="brief" role="dialog" aria-modal="true" aria-labelledby="voyage-brief-title">
+		<div class="brief" role="dialog" aria-modal="true" aria-labelledby={`voyage-brief-title-${storageKey}`}>
 			<span class="corner c-tl"></span><span class="corner c-tr"></span>
 			<span class="corner c-bl"></span><span class="corner c-br"></span>
 			<button class="brief-x" type="button" data-modal-close aria-label="Close">✕</button>
@@ -177,11 +180,12 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 					<img class="brief-img" data-modal-img src="" alt="" decoding="async" />
 					<span class="sphere" aria-hidden="true"></span>
 				</span>
+				<span class="brief-credit" data-modal-credit></span>
 			</div>
 			<div class="brief-body">
 				<span class="brief-eyebrow">Mission briefing</span>
 				<span class="brief-stardate" data-modal-year>2027</span>
-				<h2 class="brief-title" id="voyage-brief-title" data-modal-title>System</h2>
+				<h2 class="brief-title" id={`voyage-brief-title-${storageKey}`} data-modal-title>System</h2>
 				<span class="brief-system" data-modal-system></span>
 				<span class="brief-state" data-modal-state>Uncharted</span>
 				<p class="brief-detail" data-modal-detail>…</p>
@@ -354,7 +358,10 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 	.thumb {
 		position: relative;
 		width: clamp(96px, 24vw, 132px);
-		aspect-ratio: 1;
+		aspect-ratio: 1 / 1;
+		/* the parent .node grid defaults to align-items: stretch, which would
+		   override aspect-ratio and distort the square into an ellipse — pin it */
+		align-self: center;
 	}
 	/* circular "planet" image — border + glow live on the image so rim badges
 	   aren't clipped by a circular overflow */
@@ -533,6 +540,17 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 		border: 1px solid rgba(255, 255, 255, 0.16);
 		display: block;
 	}
+	.brief-credit {
+		display: block;
+		margin-top: 0.85rem;
+		max-width: 84%;
+		text-align: center;
+		font-family: var(--mono);
+		font-size: 0.58rem; letter-spacing: 0.04em; line-height: 1.4;
+		color: var(--ink-dim);
+		opacity: 0.72;
+	}
+	.brief-credit:empty { display: none; }
 	.brief-body { padding: 1.8rem 1.7rem 1.7rem; }
 	.brief-eyebrow {
 		font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase;
@@ -624,6 +642,7 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 		const mTitle = root.querySelector<HTMLElement>("[data-modal-title]");
 		const mState = root.querySelector<HTMLElement>("[data-modal-state]");
 		const mSystem = root.querySelector<HTMLElement>("[data-modal-system]");
+		const mCredit = root.querySelector<HTMLElement>("[data-modal-credit]");
 		const mDetail = root.querySelector<HTMLElement>("[data-modal-detail]");
 		const mAction = root.querySelector<HTMLButtonElement>("[data-modal-action]");
 		const brief = modal?.querySelector<HTMLElement>(".brief");
@@ -681,6 +700,7 @@ const segments = nodes.slice(0, -1).map((a, i) => {
 			const isDone = done.has(id);
 			const st = nd.dataset.status as Status;
 			if (mImg) { mImg.src = nd.dataset.img || ""; mImg.alt = nd.dataset.title || ""; }
+			if (mCredit) mCredit.textContent = nd.dataset.imgcredit || "";
 			if (mYear) mYear.textContent = `STARDATE ${nd.dataset.year || ""}`;
 			if (mTitle) mTitle.textContent = nd.dataset.title || "";
 			if (mSystem) {

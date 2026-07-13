@@ -1,118 +1,270 @@
 ---
+import BucketMap, { type Waypoint } from "../components/BucketMap.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 
-// Direct-URL-only hub linking the two bucket-list voyage maps.
-// Not linked from the site nav, noindex, and excluded from the sitemap.
-const voyages = [
+// Direct-URL-only page: two voyage maps under one roof, toggled by the tabs.
+// Not in the nav, noindex, and excluded from the sitemap.
+// Edit `detail` freely — it's the mission log shown when a planet is opened.
+// `star` names the destination after a real Yale Bright Star catalog star.
+const lifeWaypoints: Waypoint[] = [
 	{
-		href: "/bucket-list-life/",
-		craft: "🚀",
-		name: "Life Voyage",
-		zh: "活",
-		blurb: "Trips, moves, and milestones — 2027 to 2031.",
+		year: 2027,
+		title: "HK Visit Trip",
+		image: "/waypoints/hk-visit.jpg",
+		star: "Sirius",
+		detail: `Return to the neon city-world of Hong Kong — reconnect with family and friends, and revisit the streets that shaped me.
+- Visit the Peak`,
 	},
 	{
-		href: "/bucket-list-work/",
-		craft: "🛰️",
-		name: "Work Voyage",
-		zh: "作",
-		blurb: "The business trajectory — tests, certs, and offices.",
+		year: 2027,
+		title: "FUK Trip",
+		image: "/waypoints/fuk-trip.jpg",
+		star: "Vega",
+		imageCredit:
+			"Fukuoka Tower — photo ノボホショコロトソ / Wikimedia Commons · CC BY 4.0",
+		detail: `Chart Fukuoka. Scout the Kyushu base — food, neighbourhoods, and the feel of everyday life on the ground.
+- Visit mountain
+- Visit Marine World Uminonakamichi`,
+	},
+	{
+		year: 2028,
+		title: "Japan Visa",
+		image: "/waypoints/japan-visa.jpg",
+		star: "Altair",
+		detail:
+			"Pass through the gateway: secure the right visa to live in Japan. The waypoint that unlocks everything after it.",
+	},
+	{
+		year: 2028,
+		title: "Australia Trip",
+		image: "/waypoints/australia-trip.jpg",
+		star: "Canopus",
+		detail:
+			"Cross into the southern skies — the red heart of Australia. Watch Uluru burn at sunset, and trade the northern constellations for Canopus overhead.",
+	},
+	{
+		year: 2029,
+		title: "Japan School",
+		image: "/waypoints/japan-school.jpg",
+		star: "Deneb",
+		detail:
+			"Enrol in school in Japan — language and study under the aurora. Turn visiting into belonging.",
+	},
+	{
+		year: 2030,
+		title: "Europe Trip",
+		image: "/waypoints/europe-trip.jpg",
+		star: "Arcturus",
+		detail:
+			"A proper voyage across the old-world systems of Europe. New cities, old streets, and a reset of perspective.",
+	},
+	{
+		year: 2031,
+		title: "Property",
+		image: "/waypoints/property.jpg",
+		star: "Polaris",
+		detail:
+			"Make planetfall for good — a place of my own. The final destination on this trajectory.",
+	},
+];
+
+const workWaypoints: Waypoint[] = [
+	{
+		year: 2026,
+		title: "CISSP",
+		image: "/waypoints/cissp.jpg",
+		star: "Bellatrix",
+		detail:
+			"Raise the shield grid: earn the CISSP certification and anchor the security credibility the rest of the work leans on.",
+	},
+	{
+		year: 2026,
+		title: "RAI",
+		image: "/waypoints/rai.jpg",
+		star: "Capella",
+		detail:
+			"Responsible AI milestone — build and certify the practice for trustworthy, safe AI systems.",
+	},
+	{
+		year: 2026,
+		title: "JP Biz Test",
+		image: "/waypoints/jp-biz-test.jpg",
+		star: "Rigel",
+		detail: `Prep
+- Morning Sat Video Playlist
+- gengo 5h * 2
+- Child song lists`,
+	},
+	{
+		year: 2027,
+		title: "SG Office Setup",
+		image: "/waypoints/sg-office.jpg",
+		star: "Procyon",
+		detail:
+			"Establish the Singapore outpost — the regional hub and legal base of operations.",
+	},
+	{
+		year: 2028,
+		title: "Japan Office",
+		image: "/waypoints/japan-office.jpg",
+		star: "Betelgeuse",
+		detail:
+			"Open the Japan office. Turn the earlier business test into a permanent presence.",
 	},
 ];
 ---
 
 <SiteLayout
 	title="Bucket List"
-	description="Two interstellar bucket-list voyage maps — life and work."
+	description="Two interstellar bucket-list voyage maps — life and work, in one place."
+	bare
 	noindex
 >
-	<h1>Bucket List</h1>
-	<p>Two trajectories through the star sky. Pick a voyage to chart.</p>
+	<div class="bucket">
+		<div class="bucket-tabbar">
+			<div class="bucket-tabs" role="tablist" aria-label="Choose a voyage">
+				<button
+					class="bt is-active"
+					type="button"
+					role="tab"
+					id="tab-life"
+					data-tab="life"
+					aria-selected="true"
+					aria-controls="panel-life"
+				>
+					<span class="bt-craft" aria-hidden="true">🚀</span>Life <span class="bt-zh">活</span>
+				</button>
+				<button
+					class="bt"
+					type="button"
+					role="tab"
+					id="tab-work"
+					data-tab="work"
+					aria-selected="false"
+					aria-controls="panel-work"
+					tabindex="-1"
+				>
+					<span class="bt-craft" aria-hidden="true">🛰️</span>Work <span class="bt-zh">作</span>
+				</button>
+			</div>
+		</div>
 
-	<div class="voyages">
-		{
-			voyages.map((v) => (
-				<a class="voyage-card" href={v.href}>
-					<span class="craft" aria-hidden="true">
-						{v.craft}
-					</span>
-					<span class="label">
-						<span class="name">
-							{v.name} <span class="zh">{v.zh}</span>
-						</span>
-						<span class="blurb">{v.blurb}</span>
-					</span>
-					<span class="go" aria-hidden="true">→</span>
-				</a>
-			))
-		}
+		<div class="bucket-panel" id="panel-life" role="tabpanel" aria-labelledby="tab-life" data-panel="life">
+			<BucketMap
+				heading="Life Voyage 活"
+				subheading="Every planet is a bucket-list destination. Tap one for the mission briefing, then log your arrival to light the warp trail."
+				storageKey="life"
+				craft="🚀"
+				accent="#34d399"
+				accentDeep="#0f766e"
+				waypoints={lifeWaypoints}
+			/>
+		</div>
+
+		<div class="bucket-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" data-panel="work" hidden>
+			<BucketMap
+				heading="Work Voyage 作"
+				subheading="Every planet is a career milestone. Tap one for the mission briefing, then log your arrival to light the warp trail."
+				storageKey="work"
+				craft="🛰️"
+				accent="#38bdf8"
+				accentDeep="#0369a1"
+				waypoints={workWaypoints}
+			/>
+		</div>
 	</div>
 </SiteLayout>
 
 <style>
-	.voyages {
-		display: grid;
-		gap: var(--space-2, 1rem);
-		margin-top: var(--space-4, 2rem);
-		max-width: var(--content-prose-max);
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.voyage-card {
+	.bucket-tabbar {
 		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+	.bucket-tabs {
+		position: relative;
+		z-index: 5;
+		display: inline-flex;
+		gap: 0.25rem;
+		padding: 0.3rem;
+		border-radius: 999px;
+		background: rgba(10, 13, 24, 0.55);
+		border: 1px solid rgba(150, 180, 255, 0.18);
+		backdrop-filter: blur(10px) saturate(1.3);
+		-webkit-backdrop-filter: blur(10px) saturate(1.3);
+		box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	}
+	.bt {
+		appearance: none;
+		border: 0;
+		cursor: pointer;
+		display: inline-flex;
 		align-items: center;
-		gap: 1rem;
-		padding: 1.1rem 1.3rem;
-		border-radius: 16px;
-		border: 1px solid var(--content-border, rgba(0, 0, 0, 0.1));
-		background: var(--content-bg, rgba(255, 255, 255, 0.9));
-		/* override the global yellow-underline link style */
-		text-decoration: none !important;
-		background-image: none !important;
-		color: inherit !important;
-		transition:
-			transform 180ms ease,
-			box-shadow 180ms ease;
+		gap: 0.45rem;
+		padding: 0.55rem 1.25rem;
+		border-radius: 999px;
+		background: transparent;
+		color: rgba(234, 240, 255, 0.72);
+		font-family: "BAUHAUS", "Noto Serif TC", system-ui, sans-serif;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		transition: background 200ms ease, color 200ms ease, box-shadow 200ms ease;
 	}
-	.voyage-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+	.bt:hover { color: #fff; }
+	.bt:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.5); outline-offset: 2px; }
+	.bt-craft { font-size: 1.1rem; }
+	.bt-zh { opacity: 0.6; font-weight: 500; }
+	.bt.is-active { background: rgba(255, 255, 255, 0.12); color: #fff; }
+	.bt[data-tab="life"].is-active {
+		box-shadow: inset 0 0 0 1px color-mix(in srgb, #34d399 55%, transparent),
+			0 0 18px color-mix(in srgb, #34d399 28%, transparent);
 	}
-	.craft {
-		font-size: 2rem;
-		line-height: 1;
+	.bt[data-tab="work"].is-active {
+		box-shadow: inset 0 0 0 1px color-mix(in srgb, #38bdf8 55%, transparent),
+			0 0 18px color-mix(in srgb, #38bdf8 28%, transparent);
 	}
-	.label {
-		display: flex;
-		flex-direction: column;
-		gap: 0.15rem;
-		flex: 1;
-	}
-	.name {
-		font-weight: 700;
-		font-size: 1.15rem;
-	}
-	.zh {
-		opacity: 0.55;
-		font-weight: 500;
-	}
-	.blurb {
-		font-size: 0.9rem;
-		opacity: 0.75;
-	}
-	.go {
-		font-size: 1.4rem;
-		opacity: 0.5;
-		transition: transform 180ms ease;
-	}
-	.voyage-card:hover .go {
-		transform: translateX(4px);
-		opacity: 0.85;
-	}
+	.bucket-panel[hidden] { display: none; }
+
 	@media (prefers-reduced-motion: reduce) {
-		.voyage-card,
-		.go {
-			transition: none;
-		}
+		.bt { transition: none; }
 	}
 </style>
+
+<script>
+	(() => {
+		const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".bt"));
+		const panels = Array.from(document.querySelectorAll<HTMLElement>(".bucket-panel"));
+		if (!tabs.length) return;
+
+		const activate = (name: string, updateHash = true) => {
+			tabs.forEach((t) => {
+				const on = t.dataset.tab === name;
+				t.classList.toggle("is-active", on);
+				t.setAttribute("aria-selected", on ? "true" : "false");
+				t.tabIndex = on ? 0 : -1;
+			});
+			panels.forEach((p) => {
+				p.hidden = p.dataset.panel !== name;
+			});
+			if (updateHash) history.replaceState(null, "", `#${name}`);
+		};
+
+		const initial = location.hash.replace("#", "");
+		activate(initial === "work" ? "work" : "life", false);
+
+		tabs.forEach((t) => t.addEventListener("click", () => activate(t.dataset.tab || "life")));
+
+		// Left/right arrow keys move between tabs (WAI-ARIA tablist pattern).
+		const tablist = document.querySelector(".bucket-tabs");
+		tablist?.addEventListener("keydown", (e) => {
+			const ev = e as KeyboardEvent;
+			if (ev.key !== "ArrowLeft" && ev.key !== "ArrowRight") return;
+			ev.preventDefault();
+			const active = tabs.findIndex((t) => t.classList.contains("is-active"));
+			const next = ev.key === "ArrowRight" ? (active + 1) % tabs.length : (active - 1 + tabs.length) % tabs.length;
+			activate(tabs[next].dataset.tab || "life");
+			tabs[next].focus();
+		});
+	})();
+</script>
