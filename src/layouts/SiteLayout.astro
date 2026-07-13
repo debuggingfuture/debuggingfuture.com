@@ -1,18 +1,20 @@
 ---
+import { SITE_GEO } from "../astronomy/geo";
+import { computeSkyState } from "../astronomy/state";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import SkyV2Observatory from "../components/sky/SkyV2Observatory.astro";
 import TimeScrubber from "../components/sky/TimeScrubber.astro";
-import { SITE_GEO } from "../astronomy/geo";
-import { computeSkyState } from "../astronomy/state";
 
 interface Props {
 	title: string;
 	description?: string;
 	bare?: boolean;
+	/** Keep the page out of search indexes (direct-URL-only pages). */
+	noindex?: boolean;
 }
 
-const { title, description, bare = false } = Astro.props;
+const { title, description, bare = false, noindex = false } = Astro.props;
 
 function fmtCoord(value: number, posLabel: string, negLabel: string): string {
 	const abs = Math.abs(value).toFixed(2);
@@ -33,7 +35,7 @@ const inlineVarsBlock = `:root {\n${Object.entries(baselineSky.cssVars)
 <!doctype html>
 <html lang="en" class="site">
 	<head>
-		<BaseHead title={title} description={description ?? ""} />
+		<BaseHead title={title} description={description ?? ""} noindex={noindex} />
 		<style is:inline set:html={inlineVarsBlock}></style>
 		<style is:global>
 			html.site body {

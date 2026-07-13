@@ -8,11 +8,18 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	/** Keep the page out of search indexes (still crawlable for its links). */
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+const {
+	title,
+	description,
+	image = "/blog-placeholder-1.jpg",
+	noindex = false,
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -27,6 +34,7 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 	href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <!-- Font preloads -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,0 +1,118 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+// Direct-URL-only hub linking the two bucket-list voyage maps.
+// Not linked from the site nav, noindex, and excluded from the sitemap.
+const voyages = [
+	{
+		href: "/bucket-list-life/",
+		craft: "🚀",
+		name: "Life Voyage",
+		zh: "活",
+		blurb: "Trips, moves, and milestones — 2027 to 2031.",
+	},
+	{
+		href: "/bucket-list-work/",
+		craft: "🛰️",
+		name: "Work Voyage",
+		zh: "作",
+		blurb: "The business trajectory — tests, certs, and offices.",
+	},
+];
+---
+
+<SiteLayout
+	title="Bucket List"
+	description="Two interstellar bucket-list voyage maps — life and work."
+	noindex
+>
+	<h1>Bucket List</h1>
+	<p>Two trajectories through the star sky. Pick a voyage to chart.</p>
+
+	<div class="voyages">
+		{
+			voyages.map((v) => (
+				<a class="voyage-card" href={v.href}>
+					<span class="craft" aria-hidden="true">
+						{v.craft}
+					</span>
+					<span class="label">
+						<span class="name">
+							{v.name} <span class="zh">{v.zh}</span>
+						</span>
+						<span class="blurb">{v.blurb}</span>
+					</span>
+					<span class="go" aria-hidden="true">→</span>
+				</a>
+			))
+		}
+	</div>
+</SiteLayout>
+
+<style>
+	.voyages {
+		display: grid;
+		gap: var(--space-2, 1rem);
+		margin-top: var(--space-4, 2rem);
+		max-width: var(--content-prose-max);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.voyage-card {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.1rem 1.3rem;
+		border-radius: 16px;
+		border: 1px solid var(--content-border, rgba(0, 0, 0, 0.1));
+		background: var(--content-bg, rgba(255, 255, 255, 0.9));
+		/* override the global yellow-underline link style */
+		text-decoration: none !important;
+		background-image: none !important;
+		color: inherit !important;
+		transition:
+			transform 180ms ease,
+			box-shadow 180ms ease;
+	}
+	.voyage-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+	}
+	.craft {
+		font-size: 2rem;
+		line-height: 1;
+	}
+	.label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		flex: 1;
+	}
+	.name {
+		font-weight: 700;
+		font-size: 1.15rem;
+	}
+	.zh {
+		opacity: 0.55;
+		font-weight: 500;
+	}
+	.blurb {
+		font-size: 0.9rem;
+		opacity: 0.75;
+	}
+	.go {
+		font-size: 1.4rem;
+		opacity: 0.5;
+		transition: transform 180ms ease;
+	}
+	.voyage-card:hover .go {
+		transform: translateX(4px);
+		opacity: 0.85;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.voyage-card,
+		.go {
+			transition: none;
+		}
+	}
+</style>
