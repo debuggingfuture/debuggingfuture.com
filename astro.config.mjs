@@ -12,6 +12,11 @@ import remarkBreaks from "remark-breaks";
 export default defineConfig({
 	site: "https://debuggingfuture.com",
 	output: "static",
+	// The two voyage maps were folded into the single tabbed /bucket page.
+	redirects: {
+		"/bucket-list-life": "/bucket",
+		"/bucket-list-work": "/bucket",
+	},
 	adapter: cloudflare({
 		platformProxy: { enabled: true },
 		imageService: "passthrough",
@@ -30,8 +35,9 @@ export default defineConfig({
 				],
 			],
 		}),
-		// /bucket is a direct-URL-only hub — keep it out of the sitemap.
-		sitemap({ filter: (page) => !page.endsWith("/bucket/") }),
+		// The /bucket voyages are direct-URL-only — keep them (and the old
+		// /bucket-list-* redirect stubs) out of the sitemap.
+		sitemap({ filter: (page) => !page.includes("/bucket") }),
 	],
 	markdown: {
 		smartypants: false,
