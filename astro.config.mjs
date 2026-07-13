@@ -30,7 +30,8 @@ export default defineConfig({
 				],
 			],
 		}),
-		sitemap(),
+		// /bucket is a direct-URL-only hub — keep it out of the sitemap.
+		sitemap({ filter: (page) => !page.endsWith("/bucket/") }),
 	],
 	markdown: {
 		smartypants: false,
